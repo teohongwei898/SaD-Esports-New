@@ -60,7 +60,7 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onJoinD
         {/* Trailing Action */}
         <div className="hidden md:block">
           <a
-            href="https://discord.gg/sad-esports"
+            href="https://discord.gg/fGVEZaB3rn"
             target="_blank"
             rel="noreferrer noopener"
             className="bg-primary text-on-primary hard-shadow-btn px-6 py-2 rounded-lg font-bold text-xs inline-block"
@@ -107,7 +107,7 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onJoinD
             })}
           </ul>
           <a
-            href="https://discord.gg/sad-esports"
+            href="https://discord.gg/fGVEZaB3rn"
             target="_blank"
             rel="noreferrer noopener"
             onClick={() => setMobileMenuOpen(false)}
