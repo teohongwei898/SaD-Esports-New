@@ -21,7 +21,6 @@ export const MATCHES: Match[] = [
       mapScores: [
         { mapName: 'Fracture', scoreSaD: 13, scoreOpp: 4 },
         { mapName: 'Haven', scoreSaD: 13, scoreOpp: 7 },
-        { mapName: 'Pearl', scoreSaD: -, scoreOpp: - }
       ]
     }
   },
@@ -43,7 +42,6 @@ export const MATCHES: Match[] = [
       mapScores: [
         { mapName: 'Pearl', scoreSaD: 13, scoreOpp: 8 },
         { mapName: 'Split', scoreSaD: 13, scoreOpp: 5 },
-        { mapName: 'Haven', scoreSaD: -, scoreOpp: - }
       ]
     }
   },
