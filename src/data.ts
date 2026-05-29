@@ -5,78 +5,58 @@ export const MASCOT_IMAGE_URL = 'https://lh3.googleusercontent.com/aida-public/A
 export const MATCHES: Match[] = [
   {
     id: 'm1',
-    stage: 'VCL Split 2',
-    opponent: 'Team B',
+    stage: 'Challengers ACE Stage 3',
+    opponent: 'YFP',
     scoreSaD: 2,
-    scoreOpp: 1,
+    scoreOpp: 0,
     status: 'WIN',
-    opponentLogo: 'OPP',
-    date: '2026-05-24',
-    time: '18:00',
+    opponentLogo: 'YFP',
+    date: '2026-05-27',
+    time: '19:00',
     stats: {
-      mvp: 'ShadowBear',
-      kills: 54,
-      deaths: 38,
-      assists: 22,
+      mvp: 'vita',
+      kills: 43,
+      deaths: 19,
+      assists: 7,
       mapScores: [
-        { mapName: 'Haven', scoreSaD: 13, scoreOpp: 9 },
-        { mapName: 'Bind', scoreSaD: 11, scoreOpp: 13 },
-        { mapName: 'Ascent', scoreSaD: 13, scoreOpp: 8 }
+        { mapName: 'Fracture', scoreSaD: 13, scoreOpp: 4 },
+        { mapName: 'Haven', scoreSaD: 13, scoreOpp: 7 },
+        { mapName: 'Pearl', scoreSaD: -, scoreOpp: - }
       ]
     }
   },
   {
     id: 'm2',
-    stage: 'Game Changers',
-    opponent: 'Team X',
-    scoreSaD: 0,
-    scoreOpp: 2,
-    status: 'LOSS',
-    opponentLogo: 'XYZ',
-    date: '2026-05-20',
-    time: '19:30',
+    stage: 'Challengers ACE Stage 3',
+    opponent: 'FQ',
+    scoreSaD: 2,
+    scoreOpp: 0,
+    status: 'WIN',
+    opponentLogo: 'FQ',
+    date: '2026-05-29',
+    time: '19:00',
     stats: {
-      mvp: 'JettLag',
-      kills: 32,
-      deaths: 36,
-      assists: 10,
+      mvp: 'vita',
+      kills: 48,
+      deaths: 26,
+      assists: 7,
       mapScores: [
-        { mapName: 'Sunset', scoreSaD: 10, scoreOpp: 13 },
-        { mapName: 'Lotus', scoreSaD: 8, scoreOpp: 13 }
+        { mapName: 'Pearl', scoreSaD: 13, scoreOpp: 8 },
+        { mapName: 'Split', scoreSaD: 13, scoreOpp: 5 },
+        { mapName: 'Haven', scoreSaD: -, scoreOpp: - }
       ]
     }
   },
   {
     id: 'm3',
-    stage: 'VCL Split 2',
-    opponent: 'Alpha GG',
-    scoreSaD: 2,
-    scoreOpp: 0,
-    status: 'WIN',
-    opponentLogo: 'AGG',
-    date: '2026-05-15',
-    time: '20:00',
-    stats: {
-      mvp: 'Clawz',
-      kills: 44,
-      deaths: 28,
-      assists: 15,
-      mapScores: [
-        { mapName: 'Icebox', scoreSaD: 13, scoreOpp: 6 },
-        { mapName: 'Haven', scoreSaD: 13, scoreOpp: 7 }
-      ]
-    }
-  },
-  {
-    id: 'm4',
-    stage: 'Challengers Cup',
-    opponent: 'Zeta Reborn',
+    stage: 'Challengers ACE Stage 3',
+    opponent: 'NRG Academy',
     scoreSaD: 0,
     scoreOpp: 0,
     status: 'UPCOMING',
-    opponentLogo: 'ZTA',
+    opponentLogo: 'NRG',
     date: '2026-06-03',
-    time: '18:00'
+    time: '16:00'
   }
 ];
 
@@ -115,14 +95,14 @@ export const PARTNERS: Partner[] = [
 
 export const PLAYERS: Player[] = [
   {
-    id: 'vcl1',
+    id: 'welyy',
     nickname: 'ShadowBear',
     realName: 'IGL / CAPTAIN',
     role: 'IGL / CAPTAIN',
     team: 'VCL',
     bio: 'The strategic mastermind behind our aggressive plays. Never seen without a cup of coffee and a sharp tactical mind.',
-    twitter: '@ShadowBear_SaD',
-    gameProfile: 'ShadowBear#SAD',
+    twitter: '@welyyval',
+    gameProfile: 'https://www.vlr.gg/player/16671/welyy',
     avatarStyle: {
       skinColor: '#fecaca',
       hairColor: '#451a03',
