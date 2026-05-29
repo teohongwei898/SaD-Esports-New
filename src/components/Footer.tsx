@@ -40,12 +40,14 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onJoinDiscord, onS
           >
             X (Twitter)
           </button>
-          <button
-            onClick={onJoinDiscord}
+          <a
+            href="https://discord.gg/sad-esports"
+            target="_blank"
+            rel="noreferrer noopener"
             className="text-xs font-black text-on-surface-variant hover:text-primary transition-all hover:scale-110 cursor-pointer"
           >
-            Discord
-          </button>
+            Discord ↗
+          </a>
         </nav>
 
         {/* Legal Text */}

@@ -59,12 +59,14 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onJoinD
 
         {/* Trailing Action */}
         <div className="hidden md:block">
-          <button
-            onClick={onJoinDiscord}
-            className="bg-primary text-on-primary hard-shadow-btn px-6 py-2 rounded-lg font-bold text-xs"
+          <a
+            href="https://discord.gg/sad-esports"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="bg-primary text-on-primary hard-shadow-btn px-6 py-2 rounded-lg font-bold text-xs inline-block"
           >
-            Join Discord
-          </button>
+            Join Discord ↗
+          </a>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -104,15 +106,15 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, onJoinD
               );
             })}
           </ul>
-          <button
-            onClick={() => {
-              onJoinDiscord();
-              setMobileMenuOpen(false);
-            }}
-            className="w-full bg-primary text-on-primary hard-shadow-btn py-3 rounded-lg font-bold text-sm text-center"
+          <a
+            href="https://discord.gg/sad-esports"
+            target="_blank"
+            rel="noreferrer noopener"
+            onClick={() => setMobileMenuOpen(false)}
+            className="w-full bg-primary text-on-primary hard-shadow-btn py-3 rounded-lg font-bold text-sm text-center block"
           >
-            Join Discord
-          </button>
+            Join Discord ↗
+          </a>
         </div>
       )}
     </nav>
