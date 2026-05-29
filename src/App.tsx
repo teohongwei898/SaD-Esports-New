@@ -22,14 +22,12 @@ import {
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Avatar } from './components/Avatar';
-import { JoinDiscordModal } from './components/JoinDiscordModal';
 import { ContactModal, ScheduleModal } from './components/DynamicModals';
 import { MATCHES, PARTNERS, PLAYERS, STAFF, MASCOT_IMAGE_URL } from './data';
 import { Match } from './types';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
-  const [discordOpen, setDiscordOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const [scheduleOpen, setScheduleOpen] = useState(false);
   const matchScrollRef = useRef<HTMLDivElement>(null);
@@ -60,7 +58,7 @@ export default function App() {
       <Header 
         activeTab={activeTab} 
         setActiveTab={setActiveTab} 
-        onJoinDiscord={() => setDiscordOpen(true)} 
+        onJoinDiscord={() => {}} 
       />
 
       {/* Main Container */}
@@ -683,16 +681,11 @@ export default function App() {
       {/* Footer Container */}
       <Footer 
         setActiveTab={setActiveTab} 
-        onJoinDiscord={() => setDiscordOpen(true)} 
+        onJoinDiscord={() => {}} 
         onShowTwitter={() => triggerToast("🐦 Follow @SaDEsports on X (Twitter) for live roster updates and scrim streams!")} 
       />
 
       {/* INTERACTIVE MODALS */}
-      <JoinDiscordModal 
-        isOpen={discordOpen} 
-        onClose={() => setDiscordOpen(false)} 
-      />
-
       <ContactModal 
         isOpen={contactOpen} 
         onClose={() => setContactOpen(false)} 
