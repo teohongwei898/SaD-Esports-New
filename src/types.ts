@@ -8,13 +8,7 @@ export interface Match {
   opponentLogo: string;
   date: string;
   time: string;
-  stats?: {
-    mvp: string;
-    kills: number;
-    deaths: number;
-    assists: number;
-    mapScores: { mapName: string; scoreSaD: number; scoreOpp: number }[];
-  };
+  statsUrl: string; // Customizable hyperlink for stats
 }
 
 export interface Partner {
@@ -32,7 +26,9 @@ export interface Player {
   team: 'VCL' | 'GC';
   bio: string;
   twitter: string;
+  twitterUrl: string; // Customizable Twitter link
   gameProfile: string;
+  gameProfileUrl: string; // Customizable Gaming Tracker link
   avatarStyle: {
     skinColor: string;
     hairColor: string;
@@ -50,7 +46,9 @@ export interface StaffMember {
   section: 'Management' | 'Coaching';
   bio: string;
   twitter: string;
-  contact: string; // email or controller / whistle
+  twitterUrl: string; // Customizable Twitter link
+  contact: string;
+  contactUrl: string; // Customizable Contact link (mailto or website)
   badge?: 'VCL' | 'GC' | 'ACADEMY';
   avatarStyle: {
     bgColor: string;

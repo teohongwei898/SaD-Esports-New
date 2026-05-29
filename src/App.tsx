@@ -22,14 +22,13 @@ import {
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Avatar } from './components/Avatar';
-import { ContactModal, ScheduleModal } from './components/DynamicModals';
-import { MATCHES, PARTNERS, PLAYERS, STAFF, MASCOT_IMAGE_URL } from './data';
+import { ContactModal } from './components/DynamicModals';
+import { MATCHES, PARTNERS, PLAYERS, STAFF, MASCOT_IMAGE_URL, SCHEDULE_URL } from './data';
 import { Match } from './types';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
   const [contactOpen, setContactOpen] = useState(false);
-  const [scheduleOpen, setScheduleOpen] = useState(false);
   const matchScrollRef = useRef<HTMLDivElement>(null);
 
   // Simple Notification Toast State
@@ -80,7 +79,7 @@ export default function App() {
               <section className="flex flex-col md:flex-row items-center gap-12 mt-4">
                 <div className="flex-1 flex flex-col gap-6 items-start">
                   <div className="bg-secondary-fixed text-on-secondary-fixed px-4 py-1.5 rounded-full border-2 border-on-surface font-extrabold text-xs inline-block shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] hover:-translate-y-0.5 transition-transform">
-                    ⚡ #SaDWin
+                    ⚡ #NextGenTalent
                   </div>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-on-surface tracking-tight leading-tight">
                     Nurturing <span className="text-primary text-stroke">Champions.</span> Supplying the Future.
@@ -233,7 +232,7 @@ export default function App() {
                       </div>
 
                       <a
-                        href={match.status === 'UPCOMING' ? "https://www.vlr.gg" : "https://www.vlr.gg/team/11475/sad-esports"}
+                        href={match.statsUrl}
                         target="_blank"
                         rel="noreferrer noopener"
                         className="w-full text-center py-2.5 border-2 border-on-surface rounded-lg font-black text-xs hover:bg-surface-container-low transition-colors mt-2 block shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] active:translate-y-0.5"
@@ -417,20 +416,26 @@ export default function App() {
 
                       {/* Social/Trigger Row */}
                       <div className={`flex gap-3 mt-6 ${idIgl ? 'flex-col' : 'justify-center w-full border-t-2 border-surface-variant pt-4'}`}>
-                        <button
-                          onClick={() => triggerToast(`🐦 Twitter Profile: Redirecting to ${player.twitter}`)}
+                        <a
+                          href={player.twitterUrl}
+                          target="_blank"
+                          rel="noreferrer noopener"
                           className="px-3.5 py-2 border-2 border-on-surface rounded-lg hover:bg-slate-100 transition-colors shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] active:translate-y-0.5 flex items-center justify-center cursor-pointer"
+                          title={`Twitter Profile: ${player.twitter}`}
                           aria-label="Twitter handle"
                         >
                           <Twitter className="w-4 h-4 text-on-surface" />
-                        </button>
-                        <button
-                          onClick={() => triggerToast(`🎮 In-Game Profile: ${player.gameProfile}`)}
+                        </a>
+                        <a
+                          href={player.gameProfileUrl}
+                          target="_blank"
+                          rel="noreferrer noopener"
                           className="px-3.5 py-2 border-2 border-on-surface rounded-lg hover:bg-slate-100 transition-colors shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] active:translate-y-0.5 flex items-center justify-center cursor-pointer"
+                          title={`In-Game Profile: ${player.gameProfile}`}
                           aria-label="Game stats"
                         >
                           <Gamepad2 className="w-4 h-4 text-on-surface" />
-                        </button>
+                        </a>
                       </div>
                     </div>
                   );
@@ -445,12 +450,14 @@ export default function App() {
                     Follow our match schedule and tune in to the VCL streams to support the SaD Esports squad.
                   </p>
                 </div>
-                <button
-                  onClick={() => setScheduleOpen(true)}
-                  className="bg-white text-on-surface hard-shadow-btn px-6 py-3 rounded-lg font-black text-xs flex items-center gap-2 cursor-pointer hover:bg-slate-50"
+                <a
+                  href={SCHEDULE_URL}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="bg-white text-on-surface hard-shadow-btn px-6 py-3 rounded-lg font-black text-xs flex items-center gap-2 cursor-pointer hover:bg-slate-50 inline-flex"
                 >
-                  <Calendar className="w-4 h-4" /> View Schedule
-                </button>
+                  <Calendar className="w-4 h-4" /> View Schedule ↗
+                </a>
               </div>
             </motion.div>
           )}
@@ -524,21 +531,27 @@ export default function App() {
 
                         {/* Gaming Profile Button & Social buttons from Card Layout 3 */}
                         <div className="flex gap-2.5 mt-6 border-t-2 border-surface-variant pt-4 items-center">
-                          <button
-                            onClick={() => triggerToast(`🐦 Twitter Profile: Redirecting to ${player.twitter}`)}
-                            className="p-2 border-2 border-on-surface rounded-lg hover:bg-slate-100 transition-colors shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] active:translate-y-0.5"
+                          <a
+                            href={player.twitterUrl}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            className="p-2 border-2 border-on-surface rounded-lg hover:bg-slate-100 transition-colors shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] active:translate-y-0.5 flex items-center justify-center"
+                            title={`Twitter Profile: ${player.twitter}`}
                             aria-label="Twitter profile"
                           >
                             <Twitter className="w-4 h-4 text-on-surface" />
-                          </button>
+                          </a>
                           
                           {/* Custom gaming profile styling button */}
-                          <button
-                            onClick={() => triggerToast(`🎮 Gaming Profile Tracker: Checked ${player.gameProfile}`)}
+                          <a
+                            href={player.gameProfileUrl}
+                            target="_blank"
+                            rel="noreferrer noopener"
                             className="flex-1 py-1.5 bg-secondary-container text-on-secondary-container border-2 border-on-surface rounded-lg font-black text-[11px] shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] hover:bg-yellow-300 transition-all flex items-center justify-center gap-1 cursor-pointer"
+                            title={`Gaming Profile: ${player.gameProfile}`}
                           >
                             👾 Gaming Profile
-                          </button>
+                          </a>
                         </div>
                       </div>
                     );
@@ -597,20 +610,26 @@ export default function App() {
                       </div>
 
                       <div className="flex gap-2 mt-6 border-t-2 border-surface-variant pt-4 justify-center">
-                        <button
-                          onClick={() => triggerToast(`🐦 Redirecting to COO/CEO twitter: ${member.twitter}`)}
+                        <a
+                          href={member.twitterUrl}
+                          target="_blank"
+                          rel="noreferrer noopener"
                           className="px-3 py-1.5 border-2 border-on-surface rounded-lg hover:bg-slate-100 shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] active:translate-y-0.5 flex justify-center items-center cursor-pointer"
+                          title={`Twitter Profile: ${member.twitter}`}
                           aria-label="Twitter handle"
                         >
                           <Twitter className="w-4 h-4 text-on-surface" />
-                        </button>
-                        <button
-                          onClick={() => triggerToast(`✉️ Inquiry sent directly to ${member.contact}`)}
+                        </a>
+                        <a
+                          href={member.contactUrl}
+                          target="_blank"
+                          rel="noreferrer noopener"
                           className="px-3 py-1.5 border-2 border-on-surface rounded-lg hover:bg-slate-100 shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] active:translate-y-0.5 flex justify-center items-center cursor-pointer"
+                          title={`Contact: ${member.contact}`}
                           aria-label="Staff Email Contact"
                         >
                           <Mail className="w-4 h-4 text-on-surface" />
-                        </button>
+                        </a>
                       </div>
                     </div>
                   ))}
@@ -653,20 +672,26 @@ export default function App() {
                       </div>
 
                       <div className="flex gap-2.5 mt-5 border-t-2 border-surface-variant pt-3 justify-center">
-                        <button
-                          onClick={() => triggerToast(`🐦 Twitter profile: ${member.twitter}`)}
+                        <a
+                          href={member.twitterUrl}
+                          target="_blank"
+                          rel="noreferrer noopener"
                           className="p-1.5 border-2 border-on-surface rounded-lg hover:bg-slate-100 shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] active:translate-y-0.5 flex justify-center items-center cursor-pointer"
+                          title={`Twitter Profile: ${member.twitter}`}
                           aria-label="Twitter Profile"
                         >
-                          <Twitter className="w-3.5 h-3.5" />
-                        </button>
-                        <button
-                          onClick={() => triggerToast(`⚽ Tactics Workbook: Loaded strategy sheets for ${member.nickname}`)}
+                          <Twitter className="w-3.5 h-3.5 text-on-surface" />
+                        </a>
+                        <a
+                          href={member.contactUrl}
+                          target="_blank"
+                          rel="noreferrer noopener"
                           className="p-1.5 border-2 border-on-surface rounded-lg hover:bg-slate-100 shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] active:translate-y-0.5 flex justify-center items-center cursor-pointer"
-                          aria-label="Whistle strategy"
+                          title={`Contact: ${member.contact}`}
+                          aria-label="Contact / Inquiries"
                         >
-                          <Gamepad2 className="w-3.5 h-3.5" />
-                        </button>
+                          <Mail className="w-3.5 h-3.5 text-on-surface" />
+                        </a>
                       </div>
                     </div>
                   ))}
@@ -689,11 +714,6 @@ export default function App() {
       <ContactModal 
         isOpen={contactOpen} 
         onClose={() => setContactOpen(false)} 
-      />
-
-      <ScheduleModal 
-        isOpen={scheduleOpen} 
-        onClose={() => setScheduleOpen(false)} 
       />
 
       {/* TOASTER COMPONENT */}

@@ -2,59 +2,44 @@ import { Match, Partner, Player, StaffMember } from './types';
 
 export const MASCOT_IMAGE_URL = 'https://lh3.googleusercontent.com/aida-public/AB6AXuDScN8sSjYR3g8VzufS0GTEw-0N7oW-6gUKgdOJ6txfuriYJty2-AELIvl5VLtNU3ezEk_mJkBMEyohTboL8bIHCbBvsAenpDx8UoUz6UgxXRVay-QbigriTcrO3BeF8uwzCXJ8LMIR-Fao4GXlrj_lLegUXfN7_CVuj-YO-mom7CoEJ0p79A0b-g6lLHX36r4mqHCV5zvE0YStT2bB-vNCLW5krpxbwsaP2UJD_SJSryDtM5ws95YUQXvsRQ5KPiIR7Adx9jiEgT_v';
 
+export const SCHEDULE_URL = 'https://www.vlr.gg/team/13920/sad-esports';
+
 export const MATCHES: Match[] = [
   {
     id: 'm1',
-    stage: 'Challengers ACE Stage 3',
-    opponent: 'YFP',
-    scoreSaD: 2,
-    scoreOpp: 0,
-    status: 'WIN',
-    opponentLogo: 'YFP',
-    date: '2026-05-27',
-    time: '19:00',
-    stats: {
-      mvp: 'vita',
-      kills: 43,
-      deaths: 19,
-      assists: 7,
-      mapScores: [
-        { mapName: 'Fracture', scoreSaD: 13, scoreOpp: 4 },
-        { mapName: 'Haven', scoreSaD: 13, scoreOpp: 7 },
-      ]
-    }
-  },
-  {
-    id: 'm2',
-    stage: 'Challengers ACE Stage 3',
-    opponent: 'FQ',
+    stage: 'Challengers 2026: North America ACE Stage 3',
+    opponent: 'FlyQuest',
     scoreSaD: 2,
     scoreOpp: 0,
     status: 'WIN',
     opponentLogo: 'FQ',
     date: '2026-05-29',
-    time: '19:00',
-    stats: {
-      mvp: 'vita',
-      kills: 48,
-      deaths: 26,
-      assists: 7,
-      mapScores: [
-        { mapName: 'Pearl', scoreSaD: 13, scoreOpp: 8 },
-        { mapName: 'Split', scoreSaD: 13, scoreOpp: 5 },
-      ]
-    }
+    time: '18:00',
+    statsUrl: 'https://www.vlr.gg/685253/sad-esports-vs-flyquest-challengers-2026-north-america-ace-stage-3-r2-0-1'
+  },
+  {
+    id: 'm2',
+    stage: 'Challengers 2026: North America ACE Stage 3',
+    opponent: 'YFP',
+    scoreSaD: 2,
+    scoreOpp: 0,
+    status: 'LOSS',
+    opponentLogo: 'XYZ',
+    date: '2026-05-20',
+    time: '19:30',
+    statsUrl: 'https://www.vlr.gg/681523/sad-esports-vs-yfp-challengers-2026-north-america-ace-stage-3-r1'
   },
   {
     id: 'm3',
-    stage: 'Challengers ACE Stage 3',
+    stage: 'Challengers 2026: North America ACE Stage 3',
     opponent: 'NRG Academy',
     scoreSaD: 0,
     scoreOpp: 0,
     status: 'UPCOMING',
     opponentLogo: 'NRG',
     date: '2026-06-03',
-    time: '16:00'
+    time: '16:00',
+    statsUrl: 'https://www.vlr.gg/685991/sad-esports-vs-nrg-academy-challengers-2026-north-america-ace-stage-3-r3-2-0'
   }
 ];
 
@@ -93,14 +78,16 @@ export const PARTNERS: Partner[] = [
 
 export const PLAYERS: Player[] = [
   {
-    id: 'welyy',
-    nickname: 'ShadowBear',
+    id: 'vcl1',
+    nickname: 'welyy',
     realName: 'IGL / CAPTAIN',
     role: 'IGL / CAPTAIN',
     team: 'VCL',
     bio: 'The strategic mastermind behind our aggressive plays. Never seen without a cup of coffee and a sharp tactical mind.',
-    twitter: '@welyyval',
-    gameProfile: 'https://www.vlr.gg/player/16671/welyy',
+    twitter: '@welyy',
+    twitterUrl: 'https://x.com/welyyval',
+    gameProfile: 'SAD welyy',
+    gameProfileUrl: 'https://www.vlr.gg/player/16671/welyy',
     avatarStyle: {
       skinColor: '#fecaca',
       hairColor: '#451a03',
@@ -111,13 +98,15 @@ export const PLAYERS: Player[] = [
   },
   {
     id: 'vcl2',
-    nickname: 'Clawz',
+    nickname: 'payne',
     realName: 'Role: Duelist',
     role: 'DUELIST',
     team: 'VCL',
     bio: 'Entry fragging with zero fear and maximum chaos.',
-    twitter: '@Clawz_SaD',
-    gameProfile: 'Clawz#SAD',
+    twitter: '@payneiwnl',
+    twitterUrl: 'https://x.com/Payneiwnl',
+    gameProfile: 'SAD payne',
+    gameProfileUrl: 'https://www.vlr.gg/player/39239/payne',
     avatarStyle: {
       skinColor: '#fed7aa',
       hairColor: '#1e293b',
@@ -133,8 +122,10 @@ export const PLAYERS: Player[] = [
     role: 'SENTINEL',
     team: 'VCL',
     bio: 'Holding the flank so the rest of the team can play wild.',
-    twitter: '@LockDown_SaD',
-    gameProfile: 'LockDown#SAD',
+    twitter: '@zajinn7',
+    twitterUrl: 'https://x.com/zajinn7',
+    gameProfile: 'SAD zaj',
+    gameProfileUrl: 'https://www.vlr.gg/player/41550/zaj',
     avatarStyle: {
       skinColor: '#ffedd5',
       hairColor: '#78350f',
@@ -150,8 +141,10 @@ export const PLAYERS: Player[] = [
     role: 'INITIATOR',
     team: 'VCL',
     bio: 'Setting up the team for success with perfect timing and utility.',
-    twitter: '@Flash_SaD',
-    gameProfile: 'Flash#SAD',
+    twitter: '@Pa1ntVAL',
+    twitterUrl: 'https://x.com/Pa1ntVAL',
+    gameProfile: 'SAD pa1nt',
+    gameProfileUrl: 'https://www.vlr.gg/player/23407/pa1nt',
     avatarStyle: {
       skinColor: '#fbcfe8',
       hairColor: '#9d174d',
@@ -167,8 +160,10 @@ export const PLAYERS: Player[] = [
     role: 'CONTROLLER',
     team: 'VCL',
     bio: 'Manipulating the map to our advantage. The silent carry.',
-    twitter: '@SmokeScreen_SaD',
+    twitter: '@vitathedeleta',
+    twitterUrl: 'https://x.com/vitathedeleta',
     gameProfile: 'SmokeScreen#SAD',
+    gameProfileUrl: 'https://www.vlr.gg/player/45696/vita',
     avatarStyle: {
       skinColor: '#cbd5e1',
       hairColor: '#475569',
@@ -185,7 +180,9 @@ export const PLAYERS: Player[] = [
     team: 'GC',
     bio: 'The mastermind. Calls the shots and sets the traps with flawless precision.',
     twitter: '@Valkyrie_SaD',
+    twitterUrl: 'https://twitter.com/Valkyrie_SaD',
     gameProfile: 'Valkyrie#SAD',
+    gameProfileUrl: 'https://www.vlr.gg/player/444/valkyrie',
     avatarStyle: {
       skinColor: '#ffe4e6',
       hairColor: '#111827',
@@ -202,7 +199,9 @@ export const PLAYERS: Player[] = [
     team: 'GC',
     bio: 'First in, last out. Entry fragger who thrives in chaos and dashes into danger.',
     twitter: '@JettLag_SaD',
+    twitterUrl: 'https://twitter.com/JettLag_SaD',
     gameProfile: 'JettLag#SAD',
+    gameProfileUrl: 'https://www.vlr.gg/player/333/jettlag',
     avatarStyle: {
       skinColor: '#f1f5f9',
       hairColor: '#1e3a8a',
@@ -219,7 +218,9 @@ export const PLAYERS: Player[] = [
     team: 'GC',
     bio: 'Dictates the pace. Turns the map into a labyrinth of one-ways and paranoia.',
     twitter: '@Smokescreen_SaDGC',
+    twitterUrl: 'https://twitter.com/Smokescreen_SaDGC',
     gameProfile: 'SmokescreenGC#SAD',
+    gameProfileUrl: 'https://www.vlr.gg/player/222/smokescreen',
     avatarStyle: {
       skinColor: '#ffedd5',
       hairColor: '#4f46e5',
@@ -236,7 +237,9 @@ export const PLAYERS: Player[] = [
     team: 'GC',
     bio: 'The anchor. Flanks are secured and sites are held with stubborn determination.',
     twitter: '@Lockdown_SaDGC',
+    twitterUrl: 'https://twitter.com/Lockdown_SaDGC',
     gameProfile: 'LockdownGC#SAD',
+    gameProfileUrl: 'https://www.vlr.gg/player/111/lockdown',
     avatarStyle: {
       skinColor: '#fdf2f8',
       hairColor: '#0369a1',
@@ -253,7 +256,9 @@ export const PLAYERS: Player[] = [
     team: 'GC',
     bio: 'The wildcard. Plays whatever the team needs to secure the win, unpredictably dangerous.',
     twitter: '@Adapt_SaD',
+    twitterUrl: 'https://twitter.com/Adapt_SaD',
     gameProfile: 'Adapt#SAD',
+    gameProfileUrl: 'https://www.vlr.gg/player/001/adapt',
     avatarStyle: {
       skinColor: '#fae8ff',
       hairColor: '#6b21a8',
@@ -273,7 +278,9 @@ export const STAFF: StaffMember[] = [
     section: 'Management',
     bio: 'The mastermind steering the ship. Alex brings a decade of competitive experience and a slightly unhinged approach to team building.',
     twitter: '@Vanguard_SaD',
+    twitterUrl: 'https://twitter.com/Vanguard_SaD',
     contact: 'alex@sadesports.gg',
+    contactUrl: 'mailto:alex@sadesports.gg',
     avatarStyle: {
       bgColor: '#d4e3ff',
       skinColor: '#fecaca',
@@ -290,7 +297,9 @@ export const STAFF: StaffMember[] = [
     section: 'Management',
     bio: 'Keeping the chaos organized. Sarah ensures schedules are met, logistics are flawless, and everyone remembers to hydrate.',
     twitter: '@Nexus_SaD',
+    twitterUrl: 'https://twitter.com/Nexus_SaD',
     contact: 'sarah@sadesports.gg',
+    contactUrl: 'mailto:sarah@sadesports.gg',
     avatarStyle: {
       bgColor: '#e8e8ea',
       skinColor: '#ffd167',
@@ -308,7 +317,9 @@ export const STAFF: StaffMember[] = [
     section: 'Management',
     bio: 'The talent scout and roster architect. David has an uncanny eye for up-and-coming players and hidden potential.',
     twitter: '@Oracle_SaD',
+    twitterUrl: 'https://twitter.com/Oracle_SaD',
     contact: 'david@sadesports.gg',
+    contactUrl: 'mailto:david@sadesports.gg',
     avatarStyle: {
       bgColor: '#d4e3ff',
       skinColor: '#fed7aa',
@@ -326,7 +337,9 @@ export const STAFF: StaffMember[] = [
     section: 'Management',
     bio: 'Ensuring smooth day-to-day operations across all teams and facilities.',
     twitter: '@Shadow_SaD',
+    twitterUrl: 'https://twitter.com/Shadow_SaD',
     contact: 'jane@sadesports.gg',
+    contactUrl: 'mailto:jane@sadesports.gg',
     avatarStyle: {
       bgColor: '#ffdad6',
       skinColor: '#ffedd5',
@@ -344,7 +357,9 @@ export const STAFF: StaffMember[] = [
     section: 'Management',
     bio: 'The master of travel arrangements, gear shipments, and making sure nobody misses a flight.',
     twitter: '@Steel_SaD',
+    twitterUrl: 'https://twitter.com/Steel_SaD',
     contact: 'mark@sadesports.gg',
+    contactUrl: 'mailto:mark@sadesports.gg',
     avatarStyle: {
       bgColor: '#eeeef0',
       skinColor: '#fbcfe8',
@@ -353,7 +368,6 @@ export const STAFF: StaffMember[] = [
       shirtColor: '#785a00'
     }
   },
-  // Coaching Staff
   {
     id: 's7',
     name: 'Marcus "Forge" Wright',
@@ -363,7 +377,9 @@ export const STAFF: StaffMember[] = [
     badge: 'VCL',
     bio: 'Guiding the VCL champions through the heat of high-tier competition.',
     twitter: '@MarcusForge_SaD',
+    twitterUrl: 'https://twitter.com/MarcusForge_SaD',
     contact: 'forge@sadesports.gg',
+    contactUrl: 'mailto:forge@sadesports.gg',
     avatarStyle: {
       bgColor: '#d4e3ff',
       skinColor: '#fca5a5',
@@ -382,7 +398,9 @@ export const STAFF: StaffMember[] = [
     badge: 'VCL',
     bio: 'Crafting complex tactical setups and counter-strategies for our opponents.',
     twitter: '@ElenaCipher_SaD',
+    twitterUrl: 'https://twitter.com/ElenaCipher_SaD',
     contact: 'cipher@sadesports.gg',
+    contactUrl: 'mailto:cipher@sadesports.gg',
     avatarStyle: {
       bgColor: '#eeeef0',
       skinColor: '#fde047',
@@ -400,7 +418,9 @@ export const STAFF: StaffMember[] = [
     badge: 'GC',
     bio: 'Developing the Game Changers roster to achieve flawless tactical execution.',
     twitter: '@ChloeNova_SaD',
+    twitterUrl: 'https://twitter.com/ChloeNova_SaD',
     contact: 'nova@sadesports.gg',
+    contactUrl: 'mailto:nova@sadesports.gg',
     avatarStyle: {
       bgColor: '#ffdad6',
       skinColor: '#ffd167',
@@ -418,7 +438,9 @@ export const STAFF: StaffMember[] = [
     badge: 'ACADEMY',
     bio: 'Nurturing young and upcoming talents in our tier-2 development academy.',
     twitter: '@LiamSpark_SaD',
+    twitterUrl: 'https://twitter.com/LiamSpark_SaD',
     contact: 'spark@sadesports.gg',
+    contactUrl: 'mailto:spark@sadesports.gg',
     avatarStyle: {
       bgColor: '#dcffed',
       skinColor: '#fed7aa',
@@ -436,7 +458,9 @@ export const STAFF: StaffMember[] = [
     badge: 'VCL',
     bio: 'Turning numerical heatmaps, economy flows, and round patterns into tactical updates.',
     twitter: '@KevinData_SaD',
+    twitterUrl: 'https://twitter.com/KevinData_SaD',
     contact: 'kevin@sadesports.gg',
+    contactUrl: 'mailto:kevin@sadesports.gg',
     avatarStyle: {
       bgColor: '#d4e3ff',
       skinColor: '#ffedd5',
@@ -455,7 +479,9 @@ export const STAFF: StaffMember[] = [
     badge: 'GC',
     bio: 'Analyzing competitor utility usage and defense defaults to map weak points.',
     twitter: '@AriaGlitch_SaD',
+    twitterUrl: 'https://twitter.com/AriaGlitch_SaD',
     contact: 'aria@sadesports.gg',
+    contactUrl: 'mailto:aria@sadesports.gg',
     avatarStyle: {
       bgColor: '#ffdad6',
       skinColor: '#ffecd2',
