@@ -1,0 +1,6 @@
+{
+  "name": "SaD Esports",
+  "description": "The official hub of SaD Esports. View recent match results, professional VCL and Game Changers rosters, core staff members, and brand partners.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
