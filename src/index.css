@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-surface-dim: #dadadc;
+  --color-primary-container: #0072ce;
+  --color-tertiary-fixed-dim: #27e0a9;
+  --color-surface-container-high: #e8e8ea;
+  --color-surface-container-highest: #e2e2e5;
+  --color-on-primary: #ffffff;
+  --color-outline: #717783;
+  --color-on-secondary: #ffffff;
+  --color-on-error-container: #93000a;
+  --color-primary-fixed: #d4e3ff;
+  --color-outline-variant: #c1c7d4;
+  --color-tertiary-container: #00815f;
+  --color-secondary-container: #ffd167;
+  --color-primary: #0059a4;
+  --color-on-tertiary: #ffffff;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-secondary-fixed: #251a00;
+  --color-error-container: #ffdad6;
+  --color-surface-tint: #005fae;
+  --color-primary-fixed-dim: #a5c8ff;
+  --color-on-error: #ffffff;
+  --color-secondary-fixed-dim: #edc157;
+  --color-on-primary-fixed: #001c3a;
+  --color-surface-bright: #f9f9fc;
+  --color-surface-variant: #e2e2e5;
+  --color-on-surface-variant: #414752;
+  --color-secondary: #785a00;
+  --color-on-surface: #1a1c1e;
+  --color-on-secondary-container: #765900;
+  --color-inverse-primary: #a5c8ff;
+  --color-background: #f9f9fc;
+  --color-tertiary: #00654a;
+  --color-on-secondary-fixed-variant: #5b4300;
+  --color-on-tertiary-container: #dcffed;
+  --color-on-background: #1a1c1e;
+  --color-inverse-surface: #2f3133;
+  --color-inverse-on-surface: #f0f0f3;
+  --color-on-tertiary-fixed-variant: #00513b;
+  --color-on-tertiary-fixed: #002116;
+  --color-error: #ba1a1a;
+  --color-surface-container: #eeeef0;
+  --color-on-primary-container: #f4f6ff;
+  --color-tertiary-fixed: #54fdc4;
+  --color-surface: #f9f9fc;
+  --color-on-primary-fixed-variant: #004785;
+  --color-secondary-fixed: #ffdf9b;
+  --color-surface-container-low: #f3f3f6;
+
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Custom Styles for Squishy Minimalism */
+body {
+  background-color: #f9f9fc;
+  color: #1a1c1e;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+/* The Paw Pattern (Minimalist watercolor bear paw design) */
+.paw-pattern-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%230059a4' fill-opacity='0.035'%3E%3Cpath d='M25 32c-7 0-9 4-9 8 0 5 5 7 9 7s9-2 9-7c0-4-2-8-9-8z'/%3E%3Ccircle cx='17' cy='26' r='3'/%3E%3Ccircle cx='25' cy='22' r='3.5'/%3E%3Ccircle cx='33' cy='26' r='3'/%3E%3C/g%3E%3Cg fill='%230059a4' fill-opacity='0.035' transform='translate(40%2C 40) rotate(15)'%3E%3Cpath d='M25 32c-7 0-9 4-9 8 0 5 5 7 9 7s9-2 9-7c0-4-2-8-9-8z'/%3E%3Ccircle cx='17' cy='26' r='3'/%3E%3Ccircle cx='25' cy='22' r='3.5'/%3E%3Ccircle cx='33' cy='26' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 80px 80px;
+}
+
+/* 2.5D Hard Shadow Elements */
+.hard-shadow-btn {
+  border: 2px solid #1a1c1e;
+  box-shadow: 4px 4px 0px 0px #1a1c1e;
+  transition: all 0.1s ease-in-out;
+}
+.hard-shadow-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #1a1c1e;
+}
+
+.hard-shadow-card {
+  border: 3px solid #1a1c1e;
+  background-color: #ffffff;
+  box-shadow: 4px 4px 0px 0px #1a1c1e;
+  transition: all 0.2s ease-in-out;
+}
+.hard-shadow-card:hover {
+  border-color: #0059a4;
+  box-shadow: 6px 6px 0px 0px #1a1c1e;
+  transform: translateY(-2px);
+}
+
+.hard-shadow-accent-card {
+  border: 4px solid #1a1c1e;
+  background-color: #ffffff;
+  box-shadow: 8px 8px 0px 0px #1a1c1e;
+  transition: all 0.2s ease-in-out;
+}
+
+.squishy-border {
+  border: 3px solid #1a1c1e;
+  box-shadow: 5px 5px 0px 0px #1a1c1e;
+}
+
+/* Hide scrollbar for horizontal scrolling containers */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Elegant Neobrutalist custom scrollbar styling */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f3f6;
+  border: 1.5px solid #1a1c1e;
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #ffd167;
+  border: 1.5px solid #1a1c1e;
+  border-radius: 9999px;
+}
+
+/* Material Icons Helper */
+.material-icons {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
