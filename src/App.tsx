@@ -80,7 +80,7 @@ export default function App() {
               <section className="flex flex-col md:flex-row items-center gap-12 mt-4">
                 <div className="flex-1 flex flex-col gap-6 items-start">
                   <div className="bg-secondary-fixed text-on-secondary-fixed px-4 py-1.5 rounded-full border-2 border-on-surface font-extrabold text-xs inline-block shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] hover:-translate-y-0.5 transition-transform">
-                    ⚡ #NextGenTalent
+                    ⚡ #SaDWin
                   </div>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-on-surface tracking-tight leading-tight">
                     Nurturing <span className="text-primary text-stroke">Champions.</span> Supplying the Future.
