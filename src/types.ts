@@ -6,6 +6,7 @@ export interface Match {
   scoreOpp: number;
   status: 'WIN' | 'LOSS' | 'UPCOMING';
   opponentLogo: string;
+  opponentLogoUrl?: string; // Add this line
   date: string;
   time: string;
   statsUrl: string; // Customizable hyperlink for stats
