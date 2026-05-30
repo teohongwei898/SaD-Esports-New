@@ -223,11 +223,15 @@ export default function App() {
                           </div>
 
                           <div className="flex flex-col items-center gap-2 flex-1">
-                            <div className="w-12 h-12 bg-secondary-container rounded-full border-2 border-on-surface flex items-center justify-center font-black text-xs text-on-secondary-container">
-                              {match.opponentLogo}
-                            </div>
-                            <span className="font-black text-sm text-on-surface-variant">{match.opponent}</span>
-                          </div>
+          <div className="w-12 h-12 bg-white rounded-full border-2 border-on-surface flex items-center justify-center overflow-hidden p-1">
+            <img
+              alt={`${match.opponent} Logo`}
+              className="w-full h-full object-contain"
+              src={match.opponentLogoUrl} 
+            />
+          </div>
+          <span className="font-black text-sm text-on-surface-variant">{match.opponent}</span>
+        </div>
                         </div>
                       </div>
 
