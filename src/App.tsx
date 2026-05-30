@@ -9,7 +9,7 @@ import {
   ChevronRight, 
   Gamepad2, 
   Volume2, 
-  Award, 
+  Award,
   Tv, 
   ShoppingBag, 
   Sparkles, 
@@ -365,7 +365,7 @@ export default function App() {
                       The <span className="text-primary font-extrabold underline decoration-wavy decoration-3 underline-offset-8">Kings</span> of Chaos.
                     </h1>
                     <p className="text-sm font-semibold text-on-surface-variant max-w-2xl leading-relaxed">
-                      Meet our premier VCL roster dominating Split 2. Unconventional tacticians, crispy headshots, and an unrelenting drive to secure the trophy.
+                      Meet our premier VCL roster dominating Split 3. Unconventional tacticians, crispy headshots, and an unrelenting drive to secure the trophy.
                     </p>
                   </div>
 
