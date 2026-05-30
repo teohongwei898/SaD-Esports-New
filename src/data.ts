@@ -7,36 +7,39 @@ export const SCHEDULE_URL = 'https://www.vlr.gg/team/13920/sad-esports';
 export const MATCHES: Match[] = [
   {
     id: 'm1',
-    stage: 'Challengers 2026: North America ACE Stage 3',
+    stage: 'VCL 2026: North America ACE Stage 3',
     opponent: 'FlyQuest',
     scoreSaD: 2,
     scoreOpp: 0,
     status: 'WIN',
     opponentLogo: 'FQ',
+    opponentLogoUrl: 'https://owcdn.net/img/69cac541ed59b.png',
     date: '2026-05-29',
     time: '18:00',
     statsUrl: 'https://www.vlr.gg/685253/sad-esports-vs-flyquest-challengers-2026-north-america-ace-stage-3-r2-0-1'
   },
   {
     id: 'm2',
-    stage: 'Challengers 2026: North America ACE Stage 3',
+    stage: 'VCL 2026: North America ACE Stage 3',
     opponent: 'YFP',
     scoreSaD: 2,
     scoreOpp: 0,
     status: 'LOSS',
     opponentLogo: 'XYZ',
+    opponentLogoUrl: 'https://owcdn.net/img/677826ad11d3b.png',
     date: '2026-05-20',
     time: '19:30',
     statsUrl: 'https://www.vlr.gg/681523/sad-esports-vs-yfp-challengers-2026-north-america-ace-stage-3-r1'
   },
   {
     id: 'm3',
-    stage: 'Challengers 2026: North America ACE Stage 3',
+    stage: 'VCL 2026: North America ACE Stage 3',
     opponent: 'NRG Academy',
     scoreSaD: 0,
     scoreOpp: 0,
     status: 'UPCOMING',
     opponentLogo: 'NRG',
+    opponentLogoUrl: 'https://owcdn.net/img/6610f026c1a9e.png',
     date: '2026-06-03',
     time: '16:00',
     statsUrl: 'https://www.vlr.gg/685991/sad-esports-vs-nrg-academy-challengers-2026-north-america-ace-stage-3-r3-2-0'
@@ -77,13 +80,14 @@ export const PARTNERS: Partner[] = [
 ];
 
 export const PLAYERS: Player[] = [
+  // === VCL ROSTER ===
   {
     id: 'vcl1',
     nickname: 'welyy',
-    realName: 'IGL / CAPTAIN',
-    role: 'IGL / CAPTAIN',
+    realName: 'Carter Steven Mikkelsen',
+    role: 'INITIATOR',
     team: 'VCL',
-    bio: 'The strategic mastermind behind our aggressive plays. Never seen without a cup of coffee and a sharp tactical mind.',
+    bio: 'The strategic blueprint of the squad. Locks down the Initiator slot on Sova, tracking down enemy setups with precise recon bolts to map out our line of scrimmage.',
     twitter: '@welyy',
     twitterUrl: 'https://x.com/welyyval',
     gameProfile: 'SAD welyy',
@@ -99,10 +103,10 @@ export const PLAYERS: Player[] = [
   {
     id: 'vcl2',
     nickname: 'payne',
-    realName: 'Role: Duelist',
-    role: 'DUELIST',
+    realName: 'Kaiden Michael Peterson',
+    role: 'CONTROLLER',
     team: 'VCL',
-    bio: 'Entry fragging with zero fear and maximum chaos.',
+    bio: 'Commanding map architecture from the shadows. Holds down our Controller lines on Omen, anchoring positions and slicing up lines of sight with calculated utility.',
     twitter: '@payneiwnl',
     twitterUrl: 'https://x.com/Payneiwnl',
     gameProfile: 'SAD payne',
@@ -117,11 +121,11 @@ export const PLAYERS: Player[] = [
   },
   {
     id: 'vcl3',
-    nickname: 'LockDown',
-    realName: 'Role: Sentinel',
+    nickname: 'Zaj',
+    realName: 'Tommy Chanchrisna',
     role: 'SENTINEL',
     team: 'VCL',
-    bio: 'Holding the flank so the rest of the team can play wild.',
+    bio: 'The ultimate anchor on the Sentinel role. Shuts down map sectors single-handedly on Cypher with impenetrable networks of traps and surveillance.',
     twitter: '@zajinn7',
     twitterUrl: 'https://x.com/zajinn7',
     gameProfile: 'SAD zaj',
@@ -136,11 +140,11 @@ export const PLAYERS: Player[] = [
   },
   {
     id: 'vcl4',
-    nickname: 'Flash',
-    realName: 'Role: Initiator',
-    role: 'INITIATOR',
+    nickname: 'PA1NT',
+    realName: "Amarii Lee'Andre Peak",
+    role: 'FLEX',
     team: 'VCL',
-    bio: 'Setting up the team for success with perfect timing and utility.',
+    bio: 'Bringing high-impact utility and versatility to the server. Operating out of our Flex position on Phoenix to break stalemates and secure critical space.',
     twitter: '@Pa1ntVAL',
     twitterUrl: 'https://x.com/Pa1ntVAL',
     gameProfile: 'SAD pa1nt',
@@ -155,11 +159,11 @@ export const PLAYERS: Player[] = [
   },
   {
     id: 'vcl5',
-    nickname: 'SmokeScreen',
-    realName: 'Role: Controller',
-    role: 'CONTROLLER',
+    nickname: 'Vita',
+    realName: 'Placeholder Name', // Add actual name for Vita here if available!
+    role: 'DUELIST',
     team: 'VCL',
-    bio: 'Manipulating the map to our advantage. The silent carry.',
+    bio: 'Pure lightning on the space creation. Drives the team forward out of the Duelist slot on Neon, catching opponents off guard with explosive entry speed.',
     twitter: '@vitathedeleta',
     twitterUrl: 'https://x.com/vitathedeleta',
     gameProfile: 'SmokeScreen#SAD',
@@ -172,323 +176,186 @@ export const PLAYERS: Player[] = [
       accessories: 'none'
     }
   },
+  // === GC ROSTER PLACEHOLDERS ===
   {
     id: 'gc1',
-    nickname: 'Valkyrie',
-    realName: 'Role: Initiator',
+    nickname: 'TBD Player 1',
+    realName: 'Placeholder',
     role: 'INITIATOR',
     team: 'GC',
-    bio: 'The mastermind. Calls the shots and sets the traps with flawless precision.',
-    twitter: '@Valkyrie_SaD',
-    twitterUrl: 'https://twitter.com/Valkyrie_SaD',
-    gameProfile: 'Valkyrie#SAD',
-    gameProfileUrl: 'https://www.vlr.gg/player/444/valkyrie',
-    avatarStyle: {
-      skinColor: '#ffe4e6',
-      hairColor: '#111827',
-      hairStyle: 'bob',
-      shirtColor: '#0284c7',
-      accessories: 'headset'
-    }
+    bio: 'Roster details coming soon.',
+    twitter: '@sadesports',
+    twitterUrl: 'https://twitter.com/sadesports',
+    gameProfile: 'TBD',
+    gameProfileUrl: '#',
+    avatarStyle: { skinColor: '#ffe4e6', hairColor: '#111827', hairStyle: 'bob', shirtColor: '#0284c7', accessories: 'none' }
   },
   {
     id: 'gc2',
-    nickname: 'JettLag',
-    realName: 'Role: Duelist',
+    nickname: 'TBD Player 2',
+    realName: 'Placeholder',
     role: 'DUELIST',
     team: 'GC',
-    bio: 'First in, last out. Entry fragger who thrives in chaos and dashes into danger.',
-    twitter: '@JettLag_SaD',
-    twitterUrl: 'https://twitter.com/JettLag_SaD',
-    gameProfile: 'JettLag#SAD',
-    gameProfileUrl: 'https://www.vlr.gg/player/333/jettlag',
-    avatarStyle: {
-      skinColor: '#f1f5f9',
-      hairColor: '#1e3a8a',
-      hairStyle: 'spiky',
-      shirtColor: '#bef264',
-      accessories: 'none'
-    }
+    bio: 'Roster details coming soon.',
+    twitter: '@sadesports',
+    twitterUrl: 'https://twitter.com/sadesports',
+    gameProfile: 'TBD',
+    gameProfileUrl: '#',
+    avatarStyle: { skinColor: '#f1f5f9', hairColor: '#1e3a8a', hairStyle: 'spiky', shirtColor: '#bef264', accessories: 'none' }
   },
   {
     id: 'gc3',
-    nickname: 'Smokescreen',
-    realName: 'Role: Controller',
+    nickname: 'TBD Player 3',
+    realName: 'Placeholder',
     role: 'CONTROLLER',
     team: 'GC',
-    bio: 'Dictates the pace. Turns the map into a labyrinth of one-ways and paranoia.',
-    twitter: '@Smokescreen_SaDGC',
-    twitterUrl: 'https://twitter.com/Smokescreen_SaDGC',
-    gameProfile: 'SmokescreenGC#SAD',
-    gameProfileUrl: 'https://www.vlr.gg/player/222/smokescreen',
-    avatarStyle: {
-      skinColor: '#ffedd5',
-      hairColor: '#4f46e5',
-      hairStyle: 'classic',
-      shirtColor: '#db2777',
-      accessories: 'headset'
-    }
+    bio: 'Roster details coming soon.',
+    twitter: '@sadesports',
+    twitterUrl: 'https://twitter.com/sadesports',
+    gameProfile: 'TBD',
+    gameProfileUrl: '#',
+    avatarStyle: { skinColor: '#ffedd5', hairColor: '#4f46e5', hairStyle: 'classic', shirtColor: '#db2777', accessories: 'none' }
   },
   {
     id: 'gc4',
-    nickname: 'Lockdown',
-    realName: 'Role: Sentinel',
+    nickname: 'TBD Player 4',
+    realName: 'Placeholder',
     role: 'SENTINEL',
     team: 'GC',
-    bio: 'The anchor. Flanks are secured and sites are held with stubborn determination.',
-    twitter: '@Lockdown_SaDGC',
-    twitterUrl: 'https://twitter.com/Lockdown_SaDGC',
-    gameProfile: 'LockdownGC#SAD',
-    gameProfileUrl: 'https://www.vlr.gg/player/111/lockdown',
-    avatarStyle: {
-      skinColor: '#fdf2f8',
-      hairColor: '#0369a1',
-      hairStyle: 'bob',
-      shirtColor: '#fda4af',
-      accessories: 'none'
-    }
+    bio: 'Roster details coming soon.',
+    twitter: '@sadesports',
+    twitterUrl: 'https://twitter.com/sadesports',
+    gameProfile: 'TBD',
+    gameProfileUrl: '#',
+    avatarStyle: { skinColor: '#fdf2f8', hairColor: '#0369a1', hairStyle: 'bob', shirtColor: '#fda4af', accessories: 'none' }
   },
   {
     id: 'gc5',
-    nickname: 'Adapt',
-    realName: 'Role: Flex',
+    nickname: 'TBD Player 5',
+    realName: 'Placeholder',
     role: 'FLEX',
     team: 'GC',
-    bio: 'The wildcard. Plays whatever the team needs to secure the win, unpredictably dangerous.',
-    twitter: '@Adapt_SaD',
-    twitterUrl: 'https://twitter.com/Adapt_SaD',
-    gameProfile: 'Adapt#SAD',
-    gameProfileUrl: 'https://www.vlr.gg/player/001/adapt',
-    avatarStyle: {
-      skinColor: '#fae8ff',
-      hairColor: '#6b21a8',
-      hairStyle: 'topknot',
-      shirtColor: '#2dd4bf',
-      accessories: 'none'
-    }
+    bio: 'Roster details coming soon.',
+    twitter: '@sadesports',
+    twitterUrl: 'https://twitter.com/sadesports',
+    gameProfile: 'TBD',
+    gameProfileUrl: '#',
+    avatarStyle: { skinColor: '#fae8ff', hairColor: '#6b21a8', hairStyle: 'topknot', shirtColor: '#2dd4bf', accessories: 'none' }
   }
 ];
 
 export const STAFF: StaffMember[] = [
+  // === MANAGEMENT ===
   {
     id: 's1',
-    name: 'Alex "Vanguard" Chen',
-    nickname: 'Alex "Vanguard" Chen',
+    name: 'Nick Atkins',
+    nickname: 'Nick Atkins',
     role: 'Chief Executive Officer',
     section: 'Management',
-    bio: 'The mastermind steering the ship. Alex brings a decade of competitive experience and a slightly unhinged approach to team building.',
-    twitter: '@Vanguard_SaD',
-    twitterUrl: 'https://twitter.com/Vanguard_SaD',
-    contact: 'alex@sadesports.gg',
-    contactUrl: 'mailto:alex@sadesports.gg',
-    avatarStyle: {
-      bgColor: '#d4e3ff',
-      skinColor: '#fecaca',
-      hairColor: '#2d1500',
-      hairStyle: 'spiky',
-      shirtColor: '#0059a4'
-    }
+    bio: 'Steering the vision of SaD Esports. Building championship-winning foundations across competitive ecosystems.',
+    twitter: '@sadesports',
+    twitterUrl: 'https://twitter.com/sadesports',
+    contact: 'nick@sadwin.gg',
+    contactUrl: 'mailto:nick@sadwin.gg',
+    avatarStyle: { bgColor: '#d4e3ff', skinColor: '#fecaca', hairColor: '#2d1500', hairStyle: 'spiky', shirtColor: '#0059a4' }
   },
   {
     id: 's2',
-    name: 'Sarah "Nexus" Jenkins',
-    nickname: 'Sarah "Nexus" Jenkins',
+    name: 'Hong Wei "ech0" Teo',
+    nickname: 'ech0',
     role: 'Chief Operating Officer',
     section: 'Management',
-    bio: 'Keeping the chaos organized. Sarah ensures schedules are met, logistics are flawless, and everyone remembers to hydrate.',
-    twitter: '@Nexus_SaD',
-    twitterUrl: 'https://twitter.com/Nexus_SaD',
-    contact: 'sarah@sadesports.gg',
-    contactUrl: 'mailto:sarah@sadesports.gg',
-    avatarStyle: {
-      bgColor: '#e8e8ea',
-      skinColor: '#ffd167',
-      hairColor: '#0369a1',
-      hairStyle: 'bun',
-      shirtColor: '#785a00',
-      accessories: 'glasses'
-    }
+    bio: 'Optimizing infrastructure, business channels, and daily club logistics for maximum organizational growth.',
+    twitter: '@ech0iwnl',
+    twitterUrl: 'https://x.com/ech0iwnl',
+    contact: 'hongwei@sadwin.gg',
+    contactUrl: 'mailto:hongwei@sadwin.gg',
+    avatarStyle: { bgColor: '#e8e8ea', skinColor: '#ffd167', hairColor: '#0369a1', hairStyle: 'bun', shirtColor: '#785a00', accessories: 'none' }
   },
   {
     id: 's3',
-    name: 'David "Oracle" Kim',
-    nickname: 'David "Oracle" Kim',
-    role: 'General Manager',
+    name: 'Kaitlyn',
+    nickname: 'Kaitlyn',
+    role: 'Team Manager',
     section: 'Management',
-    bio: 'The talent scout and roster architect. David has an uncanny eye for up-and-coming players and hidden potential.',
-    twitter: '@Oracle_SaD',
-    twitterUrl: 'https://twitter.com/Oracle_SaD',
-    contact: 'david@sadesports.gg',
-    contactUrl: 'mailto:david@sadesports.gg',
-    avatarStyle: {
-      bgColor: '#d4e3ff',
-      skinColor: '#fed7aa',
-      hairColor: '#451a03',
-      hairStyle: 'slick',
-      shirtColor: '#0369a1',
-      accessories: 'headset'
-    }
+    bio: 'Overseeing daily operations, player wellness, and scheduling coordination across our competitive rosters.',
+    twitter: '@kaitlyn_xe',
+    twitterUrl: 'https://x.com/kaitlyn_xe',
+    contact: 'kaitlyn@sadwin.gg',
+    contactUrl: 'mailto:kaitlyn@sadwin.gg',
+    avatarStyle: { bgColor: '#d4e3ff', skinColor: '#fed7aa', hairColor: '#451a03', hairStyle: 'slick', shirtColor: '#0369a1', accessories: 'none' }
   },
   {
     id: 's4',
-    name: 'Jane "Shadow" Doe',
-    nickname: 'Jane "Shadow" Doe',
-    role: 'VP of Operations',
+    name: 'MHVisuals',
+    nickname: 'MHVisuals',
+    role: 'Creative Director',
     section: 'Management',
-    bio: 'Ensuring smooth day-to-day operations across all teams and facilities.',
-    twitter: '@Shadow_SaD',
-    twitterUrl: 'https://twitter.com/Shadow_SaD',
-    contact: 'jane@sadesports.gg',
-    contactUrl: 'mailto:jane@sadesports.gg',
-    avatarStyle: {
-      bgColor: '#ffdad6',
-      skinColor: '#ffedd5',
-      hairColor: '#1e293b',
-      hairStyle: 'glasses',
-      shirtColor: '#00654a',
-      accessories: 'glasses'
-    }
+    bio: 'Developing visual design languages, digital media frameworks, and creative branding aesthetics for the organization.',
+    twitter: '@sadesports',
+    twitterUrl: 'https://twitter.com/sadesports',
+    contact: 'media@sadesports.gg',
+    contactUrl: 'mailto:media@sadesports.gg',
+    avatarStyle: { bgColor: '#ffdad6', skinColor: '#ffedd5', hairColor: '#1e293b', hairStyle: 'glasses', shirtColor: '#00654a', accessories: 'glasses' }
   },
-  {
-    id: 's5',
-    name: 'Mark "Steel" Smith',
-    nickname: 'Mark "Steel" Smith',
-    role: 'Logistics Director',
-    section: 'Management',
-    bio: 'The master of travel arrangements, gear shipments, and making sure nobody misses a flight.',
-    twitter: '@Steel_SaD',
-    twitterUrl: 'https://twitter.com/Steel_SaD',
-    contact: 'mark@sadesports.gg',
-    contactUrl: 'mailto:mark@sadesports.gg',
-    avatarStyle: {
-      bgColor: '#eeeef0',
-      skinColor: '#fbcfe8',
-      hairColor: '#451a03',
-      hairStyle: 'slick',
-      shirtColor: '#785a00'
-    }
-  },
+
+  // === COACHING (VCL) ===
   {
     id: 's7',
-    name: 'Marcus "Forge" Wright',
-    nickname: 'Marcus "Forge" Wright',
+    name: 'Mikey',
+    nickname: 'Mikey',
     role: 'Head Coach',
     section: 'Coaching',
     badge: 'VCL',
-    bio: 'Guiding the VCL champions through the heat of high-tier competition.',
-    twitter: '@MarcusForge_SaD',
-    twitterUrl: 'https://twitter.com/MarcusForge_SaD',
-    contact: 'forge@sadesports.gg',
-    contactUrl: 'mailto:forge@sadesports.gg',
-    avatarStyle: {
-      bgColor: '#d4e3ff',
-      skinColor: '#fca5a5',
-      hairColor: '#475569',
-      hairStyle: 'spiky',
-      shirtColor: '#1e3a8a',
-      accessories: 'headset'
-    }
+    bio: 'Architecting the tactical strategy and micro-system playstyles for the main VCL roster.',
+    twitter: '@mikeysXO',
+    twitterUrl: 'https://x.com/mikeysXO',
+    contact: 'mikey@sadwin.gg',
+    contactUrl: 'mailto:mikey@sadwin.gg',
+    avatarStyle: { bgColor: '#d4e3ff', skinColor: '#fca5a5', hairColor: '#47impl', hairStyle: 'spiky', shirtColor: '#1e3a8a', accessories: 'none' }
   },
   {
     id: 's8',
-    name: 'Elena "Cipher" Rostova',
-    nickname: 'Elena "Cipher" Rostova',
-    role: 'Strategic Coach',
+    name: 'Scorezy',
+    nickname: 'Scorezy',
+    role: 'Assistant Coach',
     section: 'Coaching',
     badge: 'VCL',
-    bio: 'Crafting complex tactical setups and counter-strategies for our opponents.',
-    twitter: '@ElenaCipher_SaD',
-    twitterUrl: 'https://twitter.com/ElenaCipher_SaD',
-    contact: 'cipher@sadesports.gg',
-    contactUrl: 'mailto:cipher@sadesports.gg',
-    avatarStyle: {
-      bgColor: '#eeeef0',
-      skinColor: '#fde047',
-      hairColor: '#ec4899',
-      hairStyle: 'bun',
-      shirtColor: '#db2777'
-    }
+    bio: 'Breaking down performance data, dynamic VOD analysis, and structural mid-round adaptation.',
+    twitter: '@_scorezy_',
+    twitterUrl: 'https://x.com/_scorezy_',
+    contact: 'scorezy@sadwin.gg',
+    contactUrl: 'mailto:scorezy@sadwin.gg',
+    avatarStyle: { bgColor: '#eeeef0', skinColor: '#fde047', hairColor: '#ec4899', hairStyle: 'bun', shirtColor: '#db2777' }
   },
+
+  // === COACHING / STAFF (GC PLACEHOLDERS) ===
   {
     id: 's9',
-    name: 'Chloe "Nova" Smith',
-    nickname: 'Chloe "Nova" Smith',
+    name: 'GC Coach Placeholder',
+    nickname: 'TBD',
     role: 'GC Head Coach',
     section: 'Coaching',
     badge: 'GC',
-    bio: 'Developing the Game Changers roster to achieve flawless tactical execution.',
-    twitter: '@ChloeNova_SaD',
-    twitterUrl: 'https://twitter.com/ChloeNova_SaD',
-    contact: 'nova@sadesports.gg',
-    contactUrl: 'mailto:nova@sadesports.gg',
-    avatarStyle: {
-      bgColor: '#ffdad6',
-      skinColor: '#ffd167',
-      hairColor: '#312e81',
-      hairStyle: 'bob',
-      shirtColor: '#4c1d95'
-    }
-  },
-  {
-    id: 's10',
-    name: 'Liam "Spark" Jones',
-    nickname: 'Liam "Spark" Jones',
-    role: 'Academy Coach',
-    section: 'Coaching',
-    badge: 'ACADEMY',
-    bio: 'Nurturing young and upcoming talents in our tier-2 development academy.',
-    twitter: '@LiamSpark_SaD',
-    twitterUrl: 'https://twitter.com/LiamSpark_SaD',
-    contact: 'spark@sadesports.gg',
-    contactUrl: 'mailto:spark@sadesports.gg',
-    avatarStyle: {
-      bgColor: '#dcffed',
-      skinColor: '#fed7aa',
-      hairColor: '#22c55e',
-      hairStyle: 'spiky',
-      shirtColor: '#0f766e'
-    }
-  },
-  {
-    id: 's11',
-    name: 'Kevin "Data" Chen',
-    nickname: 'Kevin "Data" Chen',
-    role: 'VCL Analyst',
-    section: 'Coaching',
-    badge: 'VCL',
-    bio: 'Turning numerical heatmaps, economy flows, and round patterns into tactical updates.',
-    twitter: '@KevinData_SaD',
-    twitterUrl: 'https://twitter.com/KevinData_SaD',
-    contact: 'kevin@sadesports.gg',
-    contactUrl: 'mailto:kevin@sadesports.gg',
-    avatarStyle: {
-      bgColor: '#d4e3ff',
-      skinColor: '#ffedd5',
-      hairColor: '#172554',
-      hairStyle: 'glasses',
-      shirtColor: '#334155',
-      accessories: 'glasses'
-    }
+    bio: 'Staff assignments pending updates.',
+    twitter: '@sadesports',
+    twitterUrl: 'https://twitter.com/sadesports',
+    contact: 'info@sadesports.gg',
+    contactUrl: 'mailto:info@sadesports.gg',
+    avatarStyle: { bgColor: '#ffdad6', skinColor: '#ffd167', hairColor: '#312e81', hairStyle: 'bob', shirtColor: '#4c1d95' }
   },
   {
     id: 's12',
-    name: 'Aria "Glitch" Patel',
-    nickname: 'Aria "Glitch" Patel',
+    name: 'GC Analyst Placeholder',
+    nickname: 'TBD',
     role: 'GC Analyst',
     section: 'Coaching',
     badge: 'GC',
-    bio: 'Analyzing competitor utility usage and defense defaults to map weak points.',
-    twitter: '@AriaGlitch_SaD',
-    twitterUrl: 'https://twitter.com/AriaGlitch_SaD',
-    contact: 'aria@sadesports.gg',
-    contactUrl: 'mailto:aria@sadesports.gg',
-    avatarStyle: {
-      bgColor: '#ffdad6',
-      skinColor: '#ffecd2',
-      hairColor: '#0d9488',
-      hairStyle: 'glasses',
-      shirtColor: '#5c0632',
-      accessories: 'glasses'
-    }
+    bio: 'Staff assignments pending updates.',
+    twitter: '@sadesports',
+    twitterUrl: 'https://twitter.com/sadesports',
+    contact: 'info@sadesports.gg',
+    contactUrl: 'mailto:info@sadesports.gg',
+    avatarStyle: { bgColor: '#ffdad6', skinColor: '#ffecd2', hairColor: '#0d9488', hairStyle: 'glasses', shirtColor: '#5c0632', accessories: 'none' }
   }
 ];
