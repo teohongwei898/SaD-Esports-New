@@ -52,7 +52,7 @@ export const MATCHES: Match[] = [
     scoreOpp: 0,
     status: 'UPCOMING',
     opponentLogo: 'M80',
-    opponentLogoUrl: 'https://owcdn.net/img/6945c73504452.pngg',
+    opponentLogoUrl: 'https://owcdn.net/img/6945c73504452.png',
     date: '2026-06-19',
     time: '19:00',
     statsUrl: 'https://www.vlr.gg/688234/m80-vs-sad-esports-challengers-2026-north-america-ace-stage-3-r4-3-0'
