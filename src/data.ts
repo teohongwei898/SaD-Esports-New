@@ -31,17 +31,30 @@ export const MATCHES: Match[] = [
     time: '19:30',
     statsUrl: 'https://www.vlr.gg/681523/sad-esports-vs-yfp-challengers-2026-north-america-ace-stage-3-r1'
   },
-  {
+   {
     id: 'm3',
     stage: 'VCL 2026: North America ACE Stage 3',
     opponent: 'NRG Academy',
-    scoreSaD: 0,
-    scoreOpp: 0,
-    status: 'UPCOMING',
+    scoreSaD: 2,
+    scoreOpp: 1,
+    status: 'WIN',
     opponentLogo: 'NRG',
     opponentLogoUrl: 'https://owcdn.net/img/6610f026c1a9e.png',
     date: '2026-06-03',
-    time: '16:00',
+    time: '19:30',
+    statsUrl: 'https://www.vlr.gg/681523/sad-esports-vs-yfp-challengers-2026-north-america-ace-stage-3-r1'
+  },
+  {
+    id: 'm4',
+    stage: 'VCL 2026: North America ACE Stage 3',
+    opponent: 'M80',
+    scoreSaD: 0,
+    scoreOpp: 0,
+    status: 'UPCOMING',
+    opponentLogo: 'M80',
+    opponentLogoUrl: 'https://owcdn.net/img/6945c73504452.pngg',
+    date: '2026-06-19',
+    time: '19:00',
     statsUrl: 'https://www.vlr.gg/685991/sad-esports-vs-nrg-academy-challengers-2026-north-america-ace-stage-3-r3-2-0'
   }
 ];
