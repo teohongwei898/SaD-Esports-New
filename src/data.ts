@@ -55,7 +55,7 @@ export const MATCHES: Match[] = [
     opponentLogoUrl: 'https://owcdn.net/img/6945c73504452.pngg',
     date: '2026-06-19',
     time: '19:00',
-    statsUrl: 'https://www.vlr.gg/685991/sad-esports-vs-nrg-academy-challengers-2026-north-america-ace-stage-3-r3-2-0'
+    statsUrl: 'https://www.vlr.gg/688234/m80-vs-sad-esports-challengers-2026-north-america-ace-stage-3-r4-3-0'
   }
 ];
 
