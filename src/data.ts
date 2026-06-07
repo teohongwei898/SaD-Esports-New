@@ -1,5 +1,11 @@
 import { Match, Partner, Player, StaffMember } from './types';
 
+// 1. Grab all images in the avatars folder dynamically
+const avatarImages = import.meta.glob('./assets/avatars/*.{png,jpg,jpeg,webp}', { 
+  eager: true, 
+  import: 'default' 
+}) as Record<string, string>;
+
 export const MASCOT_IMAGE_URL = 'https://lh3.googleusercontent.com/aida-public/AB6AXuDScN8sSjYR3g8VzufS0GTEw-0N7oW-6gUKgdOJ6txfuriYJty2-AELIvl5VLtNU3ezEk_mJkBMEyohTboL8bIHCbBvsAenpDx8UoUz6UgxXRVay-QbigriTcrO3BeF8uwzCXJ8LMIR-Fao4GXlrj_lLegUXfN7_CVuj-YO-mom7CoEJ0p79A0b-g6lLHX36r4mqHCV5zvE0YStT2bB-vNCLW5krpxbwsaP2UJD_SJSryDtM5ws95YUQXvsRQ5KPiIR7Adx9jiEgT_v';
 
 export const SCHEDULE_URL = 'https://www.vlr.gg/team/13920/sad-esports';
@@ -162,13 +168,7 @@ export const PLAYERS: Player[] = [
     twitterUrl: 'https://x.com/Pa1ntVAL',
     gameProfile: 'SAD pa1nt',
     gameProfileUrl: 'https://www.vlr.gg/player/23407/pa1nt',
-    avatarStyle: {
-      skinColor: '#fbcfe8',
-      hairColor: '#9d174d',
-      hairStyle: 'topknot',
-      shirtColor: '#f59e0b',
-      accessories: 'none'
-    }
+    avatarUrl: avatarImages['./assets/avatars/Pa1nt PL.png']
   },
   {
     id: 'vcl5',
