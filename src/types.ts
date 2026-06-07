@@ -6,7 +6,7 @@ export interface Match {
   scoreOpp: number;
   status: 'WIN' | 'LOSS' | 'UPCOMING';
   opponentLogo: string;
-  opponentLogoUrl?: string; // Add this line
+  opponentLogoUrl?: string;
   date: string;
   time: string;
   statsUrl: string; // Customizable hyperlink for stats
@@ -30,7 +30,8 @@ export interface Player {
   twitterUrl: string; // Customizable Twitter link
   gameProfile: string;
   gameProfileUrl: string; // Customizable Gaming Tracker link
-  avatarStyle: {
+  avatarUrl?: string;     // Option for a custom 200x200 image link
+  avatarStyle?: {        // Made optional to support direct image overrides
     skinColor: string;
     hairColor: string;
     hairStyle: 'classic' | 'spiky' | 'glasses' | 'slick' | 'topknot' | 'bob' | 'bun' | 'short' | 'curly' | 'bald';
@@ -51,7 +52,8 @@ export interface StaffMember {
   contact: string;
   contactUrl: string; // Customizable Contact link (mailto or website)
   badge?: 'VCL' | 'GC' | 'ACADEMY';
-  avatarStyle: {
+  avatarUrl?: string;     // Option for a custom 200x200 image link
+  avatarStyle?: {        // Made optional to support direct image overrides
     bgColor: string;
     skinColor: string;
     hairColor: string;
