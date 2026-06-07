@@ -1,13 +1,7 @@
 import { Match, Partner, Player, StaffMember } from './types';
-
-// 1. Grab all images in the avatars folder dynamically
-const avatarImages = import.meta.glob('./assets/avatars/*.{png,jpg,jpeg,webp}', { 
-  eager: true, 
-  import: 'default' 
-}) as Record<string, string>;
+import * as Avatars from './assets/avatars'; 
 
 export const MASCOT_IMAGE_URL = 'https://lh3.googleusercontent.com/aida-public/AB6AXuDScN8sSjYR3g8VzufS0GTEw-0N7oW-6gUKgdOJ6txfuriYJty2-AELIvl5VLtNU3ezEk_mJkBMEyohTboL8bIHCbBvsAenpDx8UoUz6UgxXRVay-QbigriTcrO3BeF8uwzCXJ8LMIR-Fao4GXlrj_lLegUXfN7_CVuj-YO-mom7CoEJ0p79A0b-g6lLHX36r4mqHCV5zvE0YStT2bB-vNCLW5krpxbwsaP2UJD_SJSryDtM5ws95YUQXvsRQ5KPiIR7Adx9jiEgT_v';
-
 export const SCHEDULE_URL = 'https://www.vlr.gg/team/13920/sad-esports';
 
 export const MATCHES: Match[] = [
@@ -37,7 +31,7 @@ export const MATCHES: Match[] = [
     time: '19:30',
     statsUrl: 'https://www.vlr.gg/681523/sad-esports-vs-yfp-challengers-2026-north-america-ace-stage-3-r1'
   },
-   {
+  {
     id: 'm3',
     stage: 'VCL 2026: North America ACE Stage 3',
     opponent: 'NRG Academy',
@@ -99,7 +93,6 @@ export const PARTNERS: Partner[] = [
 ];
 
 export const PLAYERS: Player[] = [
-  // === VCL ROSTER ===
   {
     id: 'vcl1',
     nickname: 'welyy',
@@ -111,13 +104,7 @@ export const PLAYERS: Player[] = [
     twitterUrl: 'https://x.com/welyyval',
     gameProfile: 'SAD welyy',
     gameProfileUrl: 'https://www.vlr.gg/player/16671/welyy',
-    avatarStyle: {
-      skinColor: '#fecaca',
-      hairColor: '#451a03',
-      hairStyle: 'classic',
-      shirtColor: '#0ea5e9',
-      accessories: 'none'
-    }
+    avatarUrl: Avatars.welyyPl
   },
   {
     id: 'vcl2',
@@ -130,13 +117,7 @@ export const PLAYERS: Player[] = [
     twitterUrl: 'https://x.com/Payneiwnl',
     gameProfile: 'SAD payne',
     gameProfileUrl: 'https://www.vlr.gg/player/39239/payne',
-    avatarStyle: {
-      skinColor: '#fed7aa',
-      hairColor: '#1e293b',
-      hairStyle: 'spiky',
-      shirtColor: '#ef4444',
-      accessories: 'none'
-    }
+    avatarUrl: Avatars.paynePl
   },
   {
     id: 'vcl3',
@@ -149,13 +130,7 @@ export const PLAYERS: Player[] = [
     twitterUrl: 'https://x.com/zajinn7',
     gameProfile: 'SAD zaj',
     gameProfileUrl: 'https://www.vlr.gg/player/41550/zaj',
-    avatarStyle: {
-      skinColor: '#ffedd5',
-      hairColor: '#78350f',
-      hairStyle: 'glasses',
-      shirtColor: '#10b981',
-      accessories: 'glasses'
-    }
+    avatarUrl: Avatars.zajPl
   },
   {
     id: 'vcl4',
@@ -168,12 +143,12 @@ export const PLAYERS: Player[] = [
     twitterUrl: 'https://x.com/Pa1ntVAL',
     gameProfile: 'SAD pa1nt',
     gameProfileUrl: 'https://www.vlr.gg/player/23407/pa1nt',
-    avatarUrl: avatarImages['./assets/avatars/Pa1nt PL.png']
+    avatarUrl: Avatars.pa1ntPl
   },
   {
     id: 'vcl5',
     nickname: 'Vita',
-    realName: 'Placeholder Name', // Add actual name for Vita here if available!
+    realName: 'Placeholder Name',
     role: 'DUELIST',
     team: 'VCL',
     bio: 'Pure lightning on the space creation. Drives the team forward out of the Duelist slot on Neon, catching opponents off guard with explosive entry speed.',
@@ -181,15 +156,9 @@ export const PLAYERS: Player[] = [
     twitterUrl: 'https://x.com/vitathedeleta',
     gameProfile: 'SmokeScreen#SAD',
     gameProfileUrl: 'https://www.vlr.gg/player/45696/vita',
-    avatarStyle: {
-      skinColor: '#cbd5e1',
-      hairColor: '#475569',
-      hairStyle: 'short',
-      shirtColor: '#8b5cf6',
-      accessories: 'none'
-    }
+    avatarUrl: Avatars.vitaPl
   },
-  // === GC ROSTER PLACEHOLDERS ===
+  // === GC ROSTER PLACEHOLDERS (Keeping default fallback styles for future roster) ===
   {
     id: 'gc1',
     nickname: 'TBD Player 1',
@@ -258,7 +227,6 @@ export const PLAYERS: Player[] = [
 ];
 
 export const STAFF: StaffMember[] = [
-  // === MANAGEMENT ===
   {
     id: 's1',
     name: 'Nick Atkins',
@@ -271,19 +239,6 @@ export const STAFF: StaffMember[] = [
     contact: 'nick@sadwin.gg',
     contactUrl: 'mailto:nick@sadwin.gg',
     avatarStyle: { bgColor: '#d4e3ff', skinColor: '#fecaca', hairColor: '#2d1500', hairStyle: 'spiky', shirtColor: '#0059a4' }
-  },
-  {
-    id: 's2',
-    name: 'Hong Wei "ech0" Teo',
-    nickname: 'ech0',
-    role: 'Chief Operating Officer',
-    section: 'Management',
-    bio: 'Optimizing infrastructure, business channels, and daily club logistics for maximum organizational growth.',
-    twitter: '@ech0iwnl',
-    twitterUrl: 'https://x.com/ech0iwnl',
-    contact: 'hongwei@sadwin.gg',
-    contactUrl: 'mailto:hongwei@sadwin.gg',
-    avatarStyle: { bgColor: '#e8e8ea', skinColor: '#ffd167', hairColor: '#0369a1', hairStyle: 'bun', shirtColor: '#785a00', accessories: 'none' }
   },
   {
     id: 's3',
@@ -311,8 +266,6 @@ export const STAFF: StaffMember[] = [
     contactUrl: 'mailto:media@sadesports.gg',
     avatarStyle: { bgColor: '#ffdad6', skinColor: '#ffedd5', hairColor: '#1e293b', hairStyle: 'glasses', shirtColor: '#00654a', accessories: 'glasses' }
   },
-
-  // === COACHING (VCL) ===
   {
     id: 's7',
     name: 'Mikey',
@@ -341,8 +294,6 @@ export const STAFF: StaffMember[] = [
     contactUrl: 'mailto:scorezy@sadwin.gg',
     avatarStyle: { bgColor: '#eeeef0', skinColor: '#fde047', hairColor: '#ec4899', hairStyle: 'bun', shirtColor: '#db2777' }
   },
-
-  // === COACHING / STAFF (GC PLACEHOLDERS) ===
   {
     id: 's9',
     name: 'GC Coach Placeholder',
