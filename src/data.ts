@@ -104,6 +104,7 @@ export const PLAYERS: Player[] = [
     twitterUrl: 'https://x.com/welyyval',
     gameProfile: 'SAD welyy',
     gameProfileUrl: 'https://www.vlr.gg/player/16671/welyy',
+    avatarUrl: Avatars.welyyPl,
     avatarStyle: { skinColor: '#fdf2f8', hairColor: '#0369a1', hairStyle: 'bob', shirtColor: '#fda4af', accessories: 'none' }
   },
   {
