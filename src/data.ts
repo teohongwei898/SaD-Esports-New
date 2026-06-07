@@ -118,6 +118,7 @@ export const PLAYERS: Player[] = [
     twitterUrl: 'https://x.com/Payneiwnl',
     gameProfile: 'SAD payne',
     gameProfileUrl: 'https://www.vlr.gg/player/39239/payne',
+    avatarUrl: Avatars.paynePl,
     avatarStyle: { skinColor: '#fdf2f8', hairColor: '#0369a1', hairStyle: 'bob', shirtColor: '#fda4af', accessories: 'none' }
   },
   {
@@ -131,6 +132,7 @@ export const PLAYERS: Player[] = [
     twitterUrl: 'https://x.com/zajinn7',
     gameProfile: 'SAD zaj',
     gameProfileUrl: 'https://www.vlr.gg/player/41550/zaj',
+    avatarUrl: Avatars.zajPl,
     avatarStyle: { skinColor: '#fdf2f8', hairColor: '#0369a1', hairStyle: 'bob', shirtColor: '#fda4af', accessories: 'none' }
   },
   {
@@ -144,6 +146,7 @@ export const PLAYERS: Player[] = [
     twitterUrl: 'https://x.com/Pa1ntVAL',
     gameProfile: 'SAD pa1nt',
     gameProfileUrl: 'https://www.vlr.gg/player/23407/pa1nt',
+    avatarUrl: Avatars.pa1ntPl,
     avatarStyle: { skinColor: '#fdf2f8', hairColor: '#0369a1', hairStyle: 'bob', shirtColor: '#fda4af', accessories: 'none' }
   },
   {
@@ -157,6 +160,7 @@ export const PLAYERS: Player[] = [
     twitterUrl: 'https://x.com/vitathedeleta',
     gameProfile: 'SmokeScreen#SAD',
     gameProfileUrl: 'https://www.vlr.gg/player/45696/vita',
+    avatarUrl: Avatars.vitaPl,
     avatarStyle: { skinColor: '#fdf2f8', hairColor: '#0369a1', hairStyle: 'bob', shirtColor: '#fda4af', accessories: 'none' }
   },
   // === GC ROSTER PLACEHOLDERS (Keeping default fallback styles for future roster) ===
