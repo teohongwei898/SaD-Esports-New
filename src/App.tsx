@@ -395,13 +395,28 @@ export default function App() {
                       <div className={`flex ${idIgl ? 'flex-row gap-6 items-center flex-1' : 'flex-col items-center text-center gap-4'}`}>
                         {/* Avatar representation with specific styled layout */}
                         <div className="relative">
-                          {idIgl && (
-                            <span className="absolute -top-3 -left-3 bg-secondary-container border border-on-surface text-[10px] uppercase font-black px-2 py-0.5 rounded-full rotate-[-6deg] shadow-xs">
-                              IGL/CO-LEAD
-                            </span>
-                          )}
-                          <Avatar style={player.avatarStyle} className={`${idIgl ? 'w-28 h-28 md:w-36 md:h-36' : 'w-24 h-24'}`} />
-                        </div>
+  {idIgl && (
+    <span className="absolute -top-3 -left-3 bg-secondary-container border border-on-surface text-[10px] uppercase font-black px-2 py-0.5 rounded-full rotate-[-6deg] shadow-xs z-10">
+      IGL/CO-LEAD
+    </span>
+  )}
+  
+  {/* Priority Check: Use direct image URL if available, otherwise fallback to Avatar component */}
+  {player.avatarUrl ? (
+    <img 
+      src={player.avatarUrl} 
+      alt={`${player.nickname}'s avatar`} 
+      className={`rounded-full object-cover border-2 border-on-surface bg-zinc-800 ${
+        idIgl ? 'w-28 h-28 md:w-36 md:h-36' : 'w-24 h-24'
+      }`}
+    />
+  ) : (
+    <Avatar 
+      style={player.avatarStyle || { skinColor: '#fdf2f8' }} 
+      className={`${idIgl ? 'w-28 h-28 md:w-36 md:h-36' : 'w-24 h-24'}`} 
+    />
+  )}
+</div>
 
                         {/* Player details */}
                         <div className={`flex flex-col ${idIgl ? 'items-start text-left' : 'items-center'} gap-2`}>
