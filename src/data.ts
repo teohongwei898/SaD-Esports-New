@@ -96,7 +96,7 @@ export const PLAYERS: Player[] = [
   {
     id: 'vcl1',
     nickname: 'welyy',
-    realName: 'Carter Steven Mikkelsen',
+    realName: 'Steven',
     role: 'INITIATOR',
     team: 'VCL',
     bio: 'The strategic blueprint of the squad. Locks down the Initiator slot on Sova, tracking down enemy setups with precise recon bolts to map out our line of scrimmage.',
@@ -110,7 +110,7 @@ export const PLAYERS: Player[] = [
   {
     id: 'vcl2',
     nickname: 'payne',
-    realName: 'Kaiden Michael Peterson',
+    realName: 'Michael',
     role: 'CONTROLLER',
     team: 'VCL',
     bio: 'Commanding map architecture from the shadows. Holds down our Controller lines on Omen, anchoring positions and slicing up lines of sight with calculated utility.',
@@ -124,7 +124,7 @@ export const PLAYERS: Player[] = [
   {
     id: 'vcl3',
     nickname: 'Zaj',
-    realName: 'Tommy Chanchrisna',
+    realName: 'Tommy',
     role: 'SENTINEL',
     team: 'VCL',
     bio: 'The ultimate anchor on the Sentinel role. Shuts down map sectors single-handedly on Cypher with impenetrable networks of traps and surveillance.',
@@ -138,7 +138,7 @@ export const PLAYERS: Player[] = [
   {
     id: 'vcl4',
     nickname: 'PA1NT',
-    realName: "Amarii Lee'Andre Peak",
+    realName: "Amarii",
     role: 'FLEX',
     team: 'VCL',
     bio: 'Bringing high-impact utility and versatility to the server. Operating out of our Flex position on Phoenix to break stalemates and secure critical space.',
