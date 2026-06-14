@@ -96,7 +96,7 @@ export const PLAYERS: Player[] = [
   {
     id: 'vcl1',
     nickname: 'welyy',
-    realName: 'Steven',
+    realName: 'Carter',
     role: 'INITIATOR',
     team: 'VCL',
     bio: 'The strategic blueprint of the squad. Locks down the Initiator slot on Sova, tracking down enemy setups with precise recon bolts to map out our line of scrimmage.',
@@ -110,7 +110,7 @@ export const PLAYERS: Player[] = [
   {
     id: 'vcl2',
     nickname: 'payne',
-    realName: 'Michael',
+    realName: 'KP',
     role: 'CONTROLLER',
     team: 'VCL',
     bio: 'Commanding map architecture from the shadows. Holds down our Controller lines on Omen, anchoring positions and slicing up lines of sight with calculated utility.',
@@ -152,7 +152,7 @@ export const PLAYERS: Player[] = [
   {
     id: 'vcl5',
     nickname: 'Vita',
-    realName: 'Placeholder Name',
+    realName: 'Jaccob',
     role: 'DUELIST',
     team: 'VCL',
     bio: 'Pure lightning on the space creation. Drives the team forward out of the Duelist slot on Neon, catching opponents off guard with explosive entry speed.',
