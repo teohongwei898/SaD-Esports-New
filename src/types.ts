@@ -17,6 +17,7 @@ export interface Partner {
   name: string;
   logoType: 'lightning' | 'mouse' | 'shoe' | 'server' | 'eye';
   description: string;
+  url?: string; // Add this line
 }
 
 export interface Player {
