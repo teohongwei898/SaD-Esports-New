@@ -79,8 +79,8 @@ export default function App() {
               <section className="flex flex-col md:flex-row items-center gap-12 mt-4">
                 <div className="flex-1 flex flex-col gap-6 items-start">
                   <div className="bg-[#0e76bc] text-white px-4 py-1.5 rounded-full border-2 border-on-surface font-extrabold text-xs inline-block shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] hover:-translate-y-0.5 transition-transform">
-  ⚡ #SaDWin
-</div>
+                    ⚡ #SaDWin
+                  </div>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-on-surface tracking-tight leading-tight">
                     Nurturing <span className="text-primary text-stroke">Champions.</span> Supplying the Future.
                   </h1>
@@ -223,15 +223,15 @@ export default function App() {
                           </div>
 
                           <div className="flex flex-col items-center gap-2 flex-1">
-          <div className="w-12 h-12 bg-white rounded-full border-2 border-on-surface flex items-center justify-center overflow-hidden p-1">
-            <img
-              alt={`${match.opponent} Logo`}
-              className="w-full h-full object-contain"
-              src={match.opponentLogoUrl} 
-            />
-          </div>
-          <span className="font-black text-sm text-on-surface-variant">{match.opponent}</span>
-        </div>
+                            <div className="w-12 h-12 bg-white rounded-full border-2 border-on-surface flex items-center justify-center overflow-hidden p-1">
+                              <img
+                                alt={`${match.opponent} Logo`}
+                                className="w-full h-full object-contain"
+                                src={match.opponentLogoUrl} 
+                              />
+                            </div>
+                            <span className="font-black text-sm text-on-surface-variant">{match.opponent}</span>
+                          </div>
                         </div>
                       </div>
 
@@ -276,76 +276,71 @@ export default function App() {
                 </div>
               </div>
 
-             {/* Partners list cards */}
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-  {PARTNERS.map((partner) => {
-    // Define the core contents and styles of the card
-    const cardContent = (
-      <>
-        {/* SVG Logos to match playful minimalist sketch representations */}
-        <div className="w-20 h-20 bg-slate-100 rounded-lg border-2 border-on-surface shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] p-4 flex items-center justify-center">
-          {partner.logoType === 'lightning' && (
-            <div className="text-yellow-500 animate-pulse">
-              <span className="material-symbols-outlined text-[48px] font-black">bolt</span>
-            </div>
-          )}
-          {partner.logoType === 'mouse' && (
-            <div className="text-slate-700">
-              <span className="material-symbols-outlined text-[48px] font-black">mouse</span>
-            </div>
-          )}
-          {partner.logoType === 'shoe' && (
-            <div className="text-slate-600">
-              <span className="material-symbols-outlined text-[48px] font-black">steps</span>
-            </div>
-          )}
-          {partner.logoType === 'server' && (
-            <div className="text-blue-600">
-              <span className="material-symbols-outlined text-[48px] font-black">dns</span>
-            </div>
-          )}
-          {partner.logoType === 'eye' && (
-            <div className="text-emerald-600">
-              <span className="material-symbols-outlined text-[48px] font-black">visibility</span>
-            </div>
-          )}
-        </div>
+              {/* Partners list cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {PARTNERS.map((partner) => {
+                  const cardContent = (
+                    <>
+                      {/* SVG Logos to match playful minimalist sketch representations */}
+                      <div className="w-20 h-20 bg-slate-100 rounded-lg border-2 border-on-surface shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] p-4 flex items-center justify-center">
+                        {partner.logoType === 'lightning' && (
+                          <div className="text-yellow-500 animate-pulse">
+                            <span className="material-symbols-outlined text-[48px] font-black">bolt</span>
+                          </div>
+                        )}
+                        {partner.logoType === 'mouse' && (
+                          <div className="text-slate-700">
+                            <span className="material-symbols-outlined text-[48px] font-black">mouse</span>
+                          </div>
+                        )}
+                        {partner.logoType === 'shoe' && (
+                          <div className="text-slate-600">
+                            <span className="material-symbols-outlined text-[48px] font-black">steps</span>
+                          </div>
+                        )}
+                        {partner.logoType === 'server' && (
+                          <div className="text-blue-600">
+                            <span className="material-symbols-outlined text-[48px] font-black">dns</span>
+                          </div>
+                        )}
+                        {partner.logoType === 'eye' && (
+                          <div className="text-emerald-600">
+                            <span className="material-symbols-outlined text-[48px] font-black">visibility</span>
+                          </div>
+                        )}
+                      </div>
 
-        <div>
-          <h3 className="text-lg font-black text-on-surface mb-2">{partner.name}</h3>
-          <p className="text-xs font-semibold text-on-surface-variant leading-relaxed">
-            {partner.description}
-          </p>
-        </div>
-      </>
-    );
+                      <div>
+                        <h3 className="text-lg font-black text-on-surface mb-2">{partner.name}</h3>
+                        <p className="text-xs font-semibold text-on-surface-variant leading-relaxed">
+                          {partner.description}
+                        </p>
+                      </div>
+                    </>
+                  );
 
-    // Common Tailwind classes for standard layout and look
-    const baseClassName = "hard-shadow-card rounded-xl p-6 flex flex-col items-center text-center gap-6 bg-surface-container-lowest border-3 border-on-surface";
+                  const baseClassName = "hard-shadow-card rounded-xl p-6 flex flex-col items-center text-center gap-6 bg-surface-container-lowest border-3 border-on-surface";
 
-    // If the partner has a URL, return a clickable link element
-    if (partner.url) {
-      return (
-        <a
-          key={partner.id}
-          href={partner.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`${baseClassName} block cursor-pointer hover:-translate-y-1 transition-transform`}
-        >
-          {cardContent}
-        </a>
-      );
-    }
+                  if (partner.url) {
+                    return (
+                      <a
+                        key={partner.id}
+                        href={partner.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`${baseClassName} block cursor-pointer hover:-translate-y-1 transition-transform`}
+                      >
+                        {cardContent}
+                      </a>
+                    );
+                  }
 
-    // Otherwise, return a normal static container element
-    return (
-      <div key={partner.id} className={baseClassName}>
-        {cardContent}
-      </div>
-    );
-  })}
-</div>
+                  return (
+                    <div key={partner.id} className={baseClassName}>
+                      {cardContent}
+                    </div>
+                  );
+                })}
 
                 {/* Card 6: Join the Pack (Blue) */}
                 <div className="bg-primary text-on-primary border-3 border-on-surface rounded-xl p-6 flex flex-col justify-between items-center text-center gap-6 shadow-[4px_4px_0px_0px_rgba(26,28,30,1)] transition-transform hover:-translate-y-1">
@@ -365,7 +360,7 @@ export default function App() {
                     Contact Us <span className="material-symbols-outlined text-[16px] font-bold">arrow_forward</span>
                   </button>
                 </div>
-      
+              </div>
             </motion.div>
           )}
 
@@ -379,7 +374,7 @@ export default function App() {
               transition={{ duration: 0.25 }}
               className="flex flex-col gap-12"
             >
-              {/* Header block with VCL Highlight Banner matching the style requested */}
+              {/* Header block with VCL Highlight Banner */}
               <section className="flex flex-col gap-6 mt-4">
                 <div className="bg-primary/5 border-3 border-on-surface rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(26,28,30,1)] flex flex-col md:flex-row gap-8 items-center justify-between text-left">
                   <div className="flex flex-col gap-5 items-start">
@@ -408,8 +403,7 @@ export default function App() {
 
               {/* Roster Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {PLAYERS.filter((p) => p.team === 'VCL').map((player, idx) => {
-                  // Make ShadowBear large/special like Screenshot 2 card layout
+                {PLAYERS.filter((p) => p.team === 'VCL').map((player) => {
                   const idIgl = player.role === 'IGL / CAPTAIN';
                   return (
                     <div
@@ -421,28 +415,27 @@ export default function App() {
                       <div className={`flex ${idIgl ? 'flex-row gap-6 items-center flex-1' : 'flex-col items-center text-center gap-4'}`}>
                         {/* Avatar representation with specific styled layout */}
                         <div className="relative">
-  {idIgl && (
-    <span className="absolute -top-3 -left-3 bg-secondary-container border border-on-surface text-[10px] uppercase font-black px-2 py-0.5 rounded-full rotate-[-6deg] shadow-xs z-10">
-      IGL/CO-LEAD
-    </span>
-  )}
-  
-  {/* Priority Check: Use direct image URL if available, otherwise fallback to Avatar component */}
-  {player.avatarUrl ? (
-    <img 
-      src={player.avatarUrl} 
-      alt={`${player.nickname}'s avatar`} 
-      className={`rounded-full object-cover border-2 border-on-surface bg-zinc-800 ${
-        idIgl ? 'w-28 h-28 md:w-36 md:h-36' : 'w-24 h-24'
-      }`}
-    />
-  ) : (
-    <Avatar 
-      style={player.avatarStyle || { skinColor: '#fdf2f8' }} 
-      className={`${idIgl ? 'w-28 h-28 md:w-36 md:h-36' : 'w-24 h-24'}`} 
-    />
-  )}
-</div>
+                          {idIgl && (
+                            <span className="absolute -top-3 -left-3 bg-secondary-container border border-on-surface text-[10px] uppercase font-black px-2 py-0.5 rounded-full rotate-[-6deg] shadow-xs z-10">
+                              IGL/CO-LEAD
+                            </span>
+                          )}
+                          
+                          {player.avatarUrl ? (
+                            <img 
+                              src={player.avatarUrl} 
+                              alt={`${player.nickname}'s avatar`} 
+                              className={`rounded-full object-cover border-2 border-on-surface bg-zinc-800 ${
+                                idIgl ? 'w-28 h-28 md:w-36 md:h-36' : 'w-24 h-24'
+                              }`}
+                            />
+                          ) : (
+                            <Avatar 
+                              style={player.avatarStyle || { skinColor: '#fdf2f8' }} 
+                              className={`${idIgl ? 'w-28 h-28 md:w-36 md:h-36' : 'w-24 h-24'}`} 
+                            />
+                          )}
+                        </div>
 
                         {/* Player details */}
                         <div className={`flex flex-col ${idIgl ? 'items-start text-left' : 'items-center'} gap-2`}>
@@ -487,7 +480,7 @@ export default function App() {
                 })}
               </div>
 
-              {/* Bottom Schedule Card of Screenshot 2 */}
+              {/* Bottom Schedule Card */}
               <div className="bg-primary/10 border-3 border-on-surface rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(26,28,30,1)] flex flex-col md:flex-row justify-between items-center gap-6 mt-8">
                 <div>
                   <h3 className="text-xl md:text-2xl font-black text-on-surface mb-2">Want to see them in action?</h3>
@@ -517,7 +510,7 @@ export default function App() {
               transition={{ duration: 0.25 }}
               className="flex flex-col gap-12"
             >
-              {/* Header with Star and GC highlight banner without cam */}
+              {/* Header with Star and GC highlight banner */}
               <section className="flex flex-col gap-6 mt-4">
                 <div className="bg-pink-500/5 border-3 border-on-surface rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(26,28,30,1)] flex flex-col md:flex-row gap-8 items-center justify-between text-left">
                   <div className="flex flex-col gap-5 items-start">
@@ -537,7 +530,7 @@ export default function App() {
                     </p>
                   </div>
 
-                  {/* Decorative simple group sparkler emblem instead of setup cam */}
+                  {/* Decorative simple group sparkler emblem */}
                   <div className="shrink-0 w-24 h-24 bg-pink-100 text-pink-700 border-3 border-on-surface rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_rgba(26,28,30,1)]">
                     <span className="material-symbols-outlined text-[48px] font-black text-pink-600 animate-pulse">sparkles</span>
                   </div>
@@ -551,7 +544,7 @@ export default function App() {
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {PLAYERS.filter((p) => p.team === 'GC').map((player, idx) => {
+                  {PLAYERS.filter((p) => p.team === 'GC').map((player) => {
                     return (
                       <div
                         key={player.id}
@@ -574,7 +567,7 @@ export default function App() {
                           </div>
                         </div>
 
-                        {/* Gaming Profile Button & Social buttons from Card Layout 3 */}
+                        {/* Gaming Profile Button & Social buttons */}
                         <div className="flex gap-2.5 mt-6 border-t-2 border-surface-variant pt-4 items-center">
                           <a
                             href={player.twitterUrl}
@@ -587,7 +580,6 @@ export default function App() {
                             <Twitter className="w-4 h-4 text-on-surface" />
                           </a>
                           
-                          {/* Custom gaming profile styling button */}
                           <a
                             href={player.gameProfileUrl}
                             target="_blank"
@@ -629,9 +621,8 @@ export default function App() {
                 </p>
               </div>
 
-              {/* Management Section (Screenshot 1 Style) */}
+              {/* Management Section */}
               <section className="relative">
-                {/* Heading with left accent blue bar */}
                 <div className="flex items-center gap-3 mb-8 border-b-2 border-on-surface/20 pb-3">
                   <div className="w-3 h-8 bg-primary rounded-full border border-on-surface"></div>
                   <h2 className="text-2xl font-black text-on-surface tracking-tight">Management</h2>
@@ -681,9 +672,8 @@ export default function App() {
                 </div>
               </section>
 
-              {/* Coaching Staff section (Screenshot 1 Style) */}
+              {/* Coaching Staff section */}
               <section className="relative pt-4 border-t-3 border-on-surface/30">
-                {/* Heading with left accent badge */}
                 <div className="flex items-center gap-3 mb-8 border-b-2 border-on-surface/20 pb-3">
                   <div className="w-3.5 h-3.5 rounded-full bg-secondary-container border border-on-surface"></div>
                   <h2 className="text-2xl font-black text-on-surface tracking-tight">Coaching Staff</h2>
@@ -695,7 +685,6 @@ export default function App() {
                       key={member.id}
                       className="hard-shadow-card rounded-xl border-3 border-on-surface bg-surface-container-lowest p-5 flex flex-col justify-between relative"
                     >
-                      {/* Top Right League pill badges from Card Layout 1 */}
                       {member.badge && (
                         <span className={`absolute top-3 right-3 border border-on-surface text-[9px] font-black px-2 py-0.5 rounded-md shadow-[1px_1px_0px_0px_rgba(26,28,30,1)] uppercase tracking-wider ${
                           member.badge === 'VCL' 
