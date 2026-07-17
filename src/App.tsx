@@ -3,20 +3,10 @@ import { AnimatePresence, motion } from 'motion/react';
 import { 
   Twitter, 
   Mail, 
-  ExternalLink, 
-  Calendar, 
   ChevronLeft, 
   ChevronRight, 
   Gamepad2, 
-  Volume2, 
-  Award,
-  Tv, 
-  ShoppingBag, 
-  Sparkles, 
-  HelpCircle,
-  Hash,
-  Send,
-  MessageSquare
+  Calendar 
 } from 'lucide-react';
 
 import { Header } from './components/Header';
@@ -24,7 +14,6 @@ import { Footer } from './components/Footer';
 import { Avatar } from './components/Avatar';
 import { ContactModal } from './components/DynamicModals';
 import { MATCHES, PARTNERS, PLAYERS, STAFF, MASCOT_IMAGE_URL, SCHEDULE_URL } from './data';
-import { Match } from './types';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
@@ -46,7 +35,6 @@ export default function App() {
   const triggerToast = (message: string) => {
     setToastMessage(message);
   };
-
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-on-background relative font-sans">
@@ -268,7 +256,7 @@ export default function App() {
                   Our <span className="text-primary">Mischievous</span> Partners
                 </h1>
                 
-                {/* Thick Outlined box from Screenshot 5 */}
+                {/* Thick Outlined box */}
                 <div className="mt-6 bg-surface-container-lowest border-3 border-on-surface p-6 rounded-xl shadow-[4px_4px_0px_0px_rgba(26,28,30,1)]">
                   <p className="text-sm font-bold text-on-surface-variant leading-relaxed">
                     We team up with the best brands in the game to bring you top-tier esports entertainment. Support the brands that support the chaos.
@@ -280,46 +268,54 @@ export default function App() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {PARTNERS.map((partner) => {
                   const cardContent = (
-                    <>
-                      {/* SVG Logos to match playful minimalist sketch representations */}
-                      <div className="w-20 h-20 bg-slate-100 rounded-lg border-2 border-on-surface shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] p-4 flex items-center justify-center">
-                        {partner.logoType === 'lightning' && (
-                          <div className="text-yellow-500 animate-pulse">
-                            <span className="material-symbols-outlined text-[48px] font-black">bolt</span>
-                          </div>
-                        )}
-                        {partner.logoType === 'mouse' && (
-                          <div className="text-slate-700">
-                            <span className="material-symbols-outlined text-[48px] font-black">mouse</span>
-                          </div>
-                        )}
-                        {partner.logoType === 'shoe' && (
-                          <div className="text-slate-600">
-                            <span className="material-symbols-outlined text-[48px] font-black">steps</span>
-                          </div>
-                        )}
-                        {partner.logoType === 'server' && (
-                          <div className="text-blue-600">
-                            <span className="material-symbols-outlined text-[48px] font-black">dns</span>
-                          </div>
-                        )}
-                        {partner.logoType === 'eye' && (
-                          <div className="text-emerald-600">
-                            <span className="material-symbols-outlined text-[48px] font-black">visibility</span>
-                          </div>
-                        )}
+                    <div className="flex flex-col items-center text-center gap-6 h-full justify-between">
+                      <div className="flex flex-col items-center text-center gap-6">
+                        {/* SVG Logos to match playful minimalist sketch representations */}
+                        <div className="w-20 h-20 bg-slate-100 rounded-lg border-2 border-on-surface shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] p-4 flex items-center justify-center">
+                          {partner.logoType === 'lightning' && (
+                            <div className="text-yellow-500 animate-pulse">
+                              <span className="material-symbols-outlined text-[48px] font-black">bolt</span>
+                            </div>
+                          )}
+                          {partner.logoType === 'mouse' && (
+                            <div className="text-slate-700">
+                              <span className="material-symbols-outlined text-[48px] font-black">mouse</span>
+                            </div>
+                          )}
+                          {partner.logoType === 'shoe' && (
+                            <div className="text-slate-600">
+                              <span className="material-symbols-outlined text-[48px] font-black">steps</span>
+                            </div>
+                          )}
+                          {partner.logoType === 'server' && (
+                            <div className="text-blue-600">
+                              <span className="material-symbols-outlined text-[48px] font-black">dns</span>
+                            </div>
+                          )}
+                          {partner.logoType === 'eye' && (
+                            <div className="text-emerald-600">
+                              <span className="material-symbols-outlined text-[48px] font-black">visibility</span>
+                            </div>
+                          )}
+                        </div>
+
+                        <div>
+                          <h3 className="text-lg font-black text-on-surface mb-2">{partner.name}</h3>
+                          <p className="text-xs font-semibold text-on-surface-variant leading-relaxed">
+                            {partner.description}
+                          </p>
+                        </div>
                       </div>
 
-                      <div>
-                        <h3 className="text-lg font-black text-on-surface mb-2">{partner.name}</h3>
-                        <p className="text-xs font-semibold text-on-surface-variant leading-relaxed">
-                          {partner.description}
-                        </p>
-                      </div>
-                    </>
+                      {partner.url && (
+                        <div className="text-xs font-black text-primary hover:underline mt-2 flex items-center gap-1">
+                          Visit Brand Website ↗
+                        </div>
+                      )}
+                    </div>
                   );
 
-                  const baseClassName = "hard-shadow-card rounded-xl p-6 flex flex-col items-center text-center gap-6 bg-surface-container-lowest border-3 border-on-surface";
+                  const baseClassName = "hard-shadow-card rounded-xl p-6 bg-surface-container-lowest border-3 border-on-surface block transition-transform duration-200";
 
                   if (partner.url) {
                     return (
@@ -328,7 +324,7 @@ export default function App() {
                         href={partner.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`${baseClassName} block cursor-pointer hover:-translate-y-1 transition-transform`}
+                        className={`${baseClassName} cursor-pointer hover:-translate-y-1`}
                       >
                         {cardContent}
                       </a>
