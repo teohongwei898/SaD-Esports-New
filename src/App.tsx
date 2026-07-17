@@ -24,26 +24,18 @@ export default function App() {
 
   useEffect(() => {
     if (toastMessage) {
-      const timer = setTimeout(() => {
-        setToastMessage(null);
-      }, 3500);
+      const timer = setTimeout(() => setToastMessage(null), 3500);
       return () => clearTimeout(timer);
     }
   }, [toastMessage]);
 
-  const triggerToast = (message: string) => {
-    setToastMessage(message);
-  };
+  const triggerToast = (message: string) => setToastMessage(message);
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-on-background relative font-sans">
-      <div className="absolute inset-0 paw-pattern-bg -z-10 pointer-events-none"></div>
+      <div className="absolute inset-0 paw-pattern-bg -z-10 pointer-events-none" />
 
-      <Header
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-        onJoinDiscord={() => {}}
-      />
+      <Header activeTab={activeTab} setActiveTab={setActiveTab} onJoinDiscord={() => {}} />
 
       <main className="flex-grow w-full max-w-7xl mx-auto px-4 md:px-16 py-8 relative z-10">
         <AnimatePresence mode="wait">
@@ -82,19 +74,13 @@ export default function App() {
                       </button>
                       <div className="absolute left-0 mt-2 w-48 bg-surface-container-lowest border-2 border-on-surface rounded-lg shadow-[4px_4px_0px_0px_rgba(26,28,30,1)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-155 z-20">
                         <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setActiveTab('vcl');
-                          }}
+                          onClick={(e) => { e.stopPropagation(); setActiveTab('vcl'); }}
                           className="w-full text-left block px-4 py-2.5 hover:bg-primary-container hover:text-on-primary-container text-xs font-black cursor-pointer"
                         >
                           VCL Main Team
                         </button>
                         <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setActiveTab('gc');
-                          }}
+                          onClick={(e) => { e.stopPropagation(); setActiveTab('gc'); }}
                           className="w-full text-left block px-4 py-2.5 hover:bg-primary-container hover:text-on-primary-container text-xs font-black cursor-pointer"
                         >
                           Game Changers
@@ -102,9 +88,7 @@ export default function App() {
                       </div>
                     </div>
                     <button
-                      onClick={() =>
-                        triggerToast('🛒 Merch store opening in Summer 2026! Get ready for the drop.')
-                      }
+                      onClick={() => triggerToast('🛒 Merch store opening in Summer 2026! Get ready for the drop.')}
                       className="bg-surface-container-lowest text-on-surface hard-shadow-btn px-8 py-3.5 rounded-lg font-black text-xs cursor-pointer hover:bg-surface-container-low"
                     >
                       Shop Merch
@@ -114,7 +98,7 @@ export default function App() {
 
                 <div className="flex-1 w-full max-w-md md:max-w-none relative">
                   <div className="relative w-full aspect-[0.95] md:aspect-[0.9] rounded-2xl overflow-hidden border-4 border-on-surface shadow-[8px_8px_0px_0px_rgba(26,28,30,1)] bg-surface-container-highest flex items-center justify-center p-6 group cursor-pointer">
-                    <div className="absolute inset-0 bg-primary-container/10 group-hover:scale-105 transition-transform duration-300"></div>
+                    <div className="absolute inset-0 bg-primary-container/10 group-hover:scale-105 transition-transform duration-300" />
                     <img
                       alt="SaD Esports Blue Bear Mascot"
                       className="w-4/5 h-4/5 object-contain rounded-xl z-10 transition-transform duration-350 hover:scale-110 active:rotate-3"
@@ -144,9 +128,7 @@ export default function App() {
                     </span>
                     <div className="flex gap-2">
                       <button
-                        onClick={() => {
-                          matchScrollRef.current?.scrollBy({ left: -340, behavior: 'smooth' });
-                        }}
+                        onClick={() => matchScrollRef.current?.scrollBy({ left: -340, behavior: 'smooth' })}
                         className="w-10 h-10 rounded-full border-2 border-on-surface bg-white shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] flex items-center justify-center cursor-pointer hover:bg-surface-container-low active:translate-y-0.5 active:shadow-[1px_1px_0px_0px_rgba(26,28,30,1)] transition-all"
                         title="Scroll Left"
                         aria-label="Scroll Left"
@@ -154,9 +136,7 @@ export default function App() {
                         <ChevronLeft className="w-5 h-5 font-black text-on-surface" />
                       </button>
                       <button
-                        onClick={() => {
-                          matchScrollRef.current?.scrollBy({ left: 340, behavior: 'smooth' });
-                        }}
+                        onClick={() => matchScrollRef.current?.scrollBy({ left: 340, behavior: 'smooth' })}
                         className="w-10 h-10 rounded-full border-2 border-on-surface bg-white shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] flex items-center justify-center cursor-pointer hover:bg-surface-container-low active:translate-y-0.5 active:shadow-[1px_1px_0px_0px_rgba(26,28,30,1)] transition-all"
                         title="Scroll Right"
                         aria-label="Scroll Right"
@@ -205,7 +185,7 @@ export default function App() {
                           <div className="text-center px-4 flex flex-col items-center">
                             {match.status !== 'UPCOMING' ? (
                               <div className="text-2xl md:text-3xl font-black text-primary tracking-wide">
-                                {match.scoreSaD} - {match.scoreOpp}
+                                {match.scoreSaD} – {match.scoreOpp}
                               </div>
                             ) : (
                               <div className="text-xs font-black text-on-secondary-fixed bg-secondary-fixed border px-2 py-0.5 rounded-md uppercase">
@@ -262,7 +242,6 @@ export default function App() {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-on-surface leading-tight">
                   Our <span className="text-primary">Mischievous</span> Partners
                 </h1>
-
                 <div className="mt-6 bg-surface-container-lowest border-3 border-on-surface p-6 rounded-xl shadow-[4px_4px_0px_0px_rgba(26,28,30,1)]">
                   <p className="text-sm font-bold text-on-surface-variant leading-relaxed">
                     We team up with the best brands in the game to bring you top-tier esports entertainment. Support the
@@ -273,7 +252,10 @@ export default function App() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {PARTNERS.map((partner) => {
-                  const cardContent = (
+                  const baseClassName =
+                    'hard-shadow-card rounded-xl p-6 bg-surface-container-lowest border-3 border-on-surface block transition-transform duration-200';
+
+                  const content = (
                     <div className="flex flex-col items-center text-center gap-6 h-full justify-between">
                       <div className="flex flex-col items-center text-center gap-6">
                         <div className="w-20 h-20 bg-slate-100 rounded-lg border-2 border-on-surface shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] p-4 flex items-center justify-center">
@@ -320,9 +302,6 @@ export default function App() {
                     </div>
                   );
 
-                  const baseClassName =
-                    'hard-shadow-card rounded-xl p-6 bg-surface-container-lowest border-3 border-on-surface block transition-transform duration-200';
-
                   if (partner.url) {
                     return (
                       <a
@@ -332,14 +311,14 @@ export default function App() {
                         rel="noopener noreferrer"
                         className={`${baseClassName} cursor-pointer hover:-translate-y-1`}
                       >
-                        {cardContent}
+                        {content}
                       </a>
                     );
                   }
 
                   return (
                     <div key={partner.id} className={baseClassName}>
-                      {cardContent}
+                      {content}
                     </div>
                   );
                 })}
@@ -395,7 +374,6 @@ export default function App() {
                       unrelenting drive to secure the trophy.
                     </p>
                   </div>
-
                   <div className="shrink-0 w-24 h-24 bg-blue-100 text-blue-700 border-3 border-on-surface rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_rgba(26,28,30,1)]">
                     <span className="material-symbols-outlined text-[48px] font-black text-primary animate-pulse">
                       emoji_events
@@ -406,21 +384,21 @@ export default function App() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {PLAYERS.filter((p) => p.team === 'VCL').map((player) => {
-                  const idIgl = player.role === 'IGL / CAPTAIN';
+                  const isIgl = player.role === 'IGL / CAPTAIN';
                   return (
                     <div
                       key={player.id}
                       className={`hard-shadow-card rounded-2xl border-3 border-on-surface p-6 bg-surface-container-lowest flex flex-col justify-between ${
-                        idIgl ? 'md:col-span-2 flex-row gap-6 p-8 items-center' : ''
+                        isIgl ? 'md:col-span-2 flex-row gap-6 p-8 items-center' : ''
                       }`}
                     >
                       <div
                         className={`flex ${
-                          idIgl ? 'flex-row gap-6 items-center flex-1' : 'flex-col items-center text-center gap-4'
+                          isIgl ? 'flex-row gap-6 items-center flex-1' : 'flex-col items-center text-center gap-4'
                         }`}
                       >
                         <div className="relative">
-                          {idIgl && (
+                          {isIgl && (
                             <span className="absolute -top-3 -left-3 bg-secondary-container border border-on-surface text-[10px] uppercase font-black px-2 py-0.5 rounded-full rotate-[-6deg] shadow-xs z-10">
                               IGL/CO-LEAD
                             </span>
@@ -430,18 +408,18 @@ export default function App() {
                               src={player.avatarUrl}
                               alt={`${player.nickname}'s avatar`}
                               className={`rounded-full object-cover border-2 border-on-surface bg-zinc-800 ${
-                                idIgl ? 'w-28 h-28 md:w-36 md:h-36' : 'w-24 h-24'
+                                isIgl ? 'w-28 h-28 md:w-36 md:h-36' : 'w-24 h-24'
                               }`}
                             />
                           ) : (
                             <Avatar
                               style={player.avatarStyle || { skinColor: '#fdf2f8' }}
-                              className={`${idIgl ? 'w-28 h-28 md:w-36 md:h-36' : 'w-24 h-24'}`}
+                              className={`${isIgl ? 'w-28 h-28 md:w-36 md:h-36' : 'w-24 h-24'}`}
                             />
                           )}
                         </div>
 
-                        <div className={`flex flex-col ${idIgl ? 'items-start text-left' : 'items-center'} gap-2`}>
+                        <div className={`flex flex-col ${isIgl ? 'items-start text-left' : 'items-center'} gap-2`}>
                           <div className="flex items-center gap-2">
                             <span className="bg-primary/10 text-primary border border-primary/30 px-2 py-0.5 rounded-full text-[10px] font-black uppercase">
                               {player.role}
@@ -455,7 +433,11 @@ export default function App() {
                         </div>
                       </div>
 
-                      <div className={`flex gap-3 mt-6 ${idIgl ? 'flex-col' : 'justify-center w-full border-t-2 border-surface-variant pt-4'}`}>
+                      <div
+                        className={`flex gap-3 mt-6 ${
+                          isIgl ? 'flex-col' : 'justify-center w-full border-t-2 border-surface-variant pt-4'
+                        }`}
+                      >
                         <a
                           href={player.twitterUrl}
                           target="_blank"
@@ -530,7 +512,6 @@ export default function App() {
                       Changers circuit. Expect no mercy, just absolute dominance.
                     </p>
                   </div>
-
                   <div className="shrink-0 w-24 h-24 bg-pink-100 text-pink-700 border-3 border-on-surface rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_rgba(26,28,30,1)]">
                     <span className="material-symbols-outlined text-[48px] font-black text-pink-600 animate-pulse">
                       sparkles
@@ -622,7 +603,7 @@ export default function App() {
 
               <section className="relative">
                 <div className="flex items-center gap-3 mb-8 border-b-2 border-on-surface/20 pb-3">
-                  <div className="w-3 h-8 bg-primary rounded-full border border-on-surface"></div>
+                  <div className="w-3 h-8 bg-primary rounded-full border border-on-surface" />
                   <h2 className="text-2xl font-black text-on-surface tracking-tight">Management</h2>
                 </div>
 
@@ -672,7 +653,7 @@ export default function App() {
 
               <section className="relative pt-4 border-t-3 border-on-surface/30">
                 <div className="flex items-center gap-3 mb-8 border-b-2 border-on-surface/20 pb-3">
-                  <div className="w-3.5 h-3.5 rounded-full bg-secondary-container border border-on-surface"></div>
+                  <div className="w-3.5 h-3.5 rounded-full bg-secondary-container border border-on-surface" />
                   <h2 className="text-2xl font-black text-on-surface tracking-tight">Coaching Staff</h2>
                 </div>
 
@@ -738,9 +719,7 @@ export default function App() {
       <Footer
         setActiveTab={setActiveTab}
         onJoinDiscord={() => {}}
-        onShowTwitter={() =>
-          triggerToast('🐦 Follow @SaDEsports on X (Twitter) for live roster updates and scrim streams!')
-        }
+        onShowTwitter={() => triggerToast('🐦 Follow @SaDEsports on X (Twitter) for live roster updates and scrim streams!')}
       />
 
       <ContactModal isOpen={contactOpen} onClose={() => setContactOpen(false)} />
