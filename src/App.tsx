@@ -64,36 +64,44 @@ export default function App() {
                   </p>
 
                   <div className="flex flex-wrap gap-4 pt-4">
-                    <div className="relative group">
-                      <button
-                        onClick={() => setActiveTab('vcl')}
-                        className="bg-primary text-on-primary hard-shadow-btn px-8 py-3.5 rounded-lg font-black text-xs flex items-center gap-2 cursor-pointer"
-                      >
-                        View Rosters
-                        <span className="material-symbols-outlined text-[18px]">expand_more</span>
-                      </button>
-                      <div className="absolute left-0 mt-2 w-48 bg-surface-container-lowest border-2 border-on-surface rounded-lg shadow-[4px_4px_0px_0px_rgba(26,28,30,1)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-155 z-20">
-                        <button
-                          onClick={(e) => { e.stopPropagation(); setActiveTab('vcl'); }}
-                          className="w-full text-left block px-4 py-2.5 hover:bg-primary-container hover:text-on-primary-container text-xs font-black cursor-pointer"
-                        >
-                          VCL Main Team
-                        </button>
-                        <button
-                          onClick={(e) => { e.stopPropagation(); setActiveTab('gc'); }}
-                          className="w-full text-left block px-4 py-2.5 hover:bg-primary-container hover:text-on-primary-container text-xs font-black cursor-pointer"
-                        >
-                          Game Changers
-                        </button>
-                      </div>
-                    </div>
-                    <button
-                      onClick={() => triggerToast('🛒 Merch store opening in Summer 2026! Get ready for the drop.')}
-                      className="bg-surface-container-lowest text-on-surface hard-shadow-btn px-8 py-3.5 rounded-lg font-black text-xs cursor-pointer hover:bg-surface-container-low"
-                    >
-                      Shop Merch
-                    </button>
-                  </div>
+  <div className="relative group">
+    <button
+      onClick={() => setActiveTab('vcl')}
+      className="bg-primary text-on-primary hard-shadow-btn px-8 py-3.5 rounded-lg font-black text-xs flex items-center gap-2 cursor-pointer"
+    >
+      View Rosters
+      <span className="material-symbols-outlined text-[18px]">expand_more</span>
+    </button>
+
+    <div className="absolute left-0 mt-2 w-48 bg-surface-container-lowest border-2 border-on-surface rounded-lg shadow-[4px_4px_0px_0px_rgba(26,28,30,1)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-20">
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          setActiveTab('vcl');
+        }}
+        className="w-full text-left block px-4 py-2.5 hover:bg-primary-container hover:text-on-primary-container text-xs font-black cursor-pointer"
+      >
+        VCL Main Team
+      </button>
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          setActiveTab('gc');
+        }}
+        className="w-full text-left block px-4 py-2.5 hover:bg-primary-container hover:text-on-primary-container text-xs font-black cursor-pointer"
+      >
+        Game Changers
+      </button>
+    </div>
+  </div>
+
+  <button
+    onClick={() => triggerToast('🛒 Merch store opening in Summer 2026! Get ready for the drop.')}
+    className="bg-surface-container-lowest text-on-surface hard-shadow-btn px-8 py-3.5 rounded-lg font-black text-xs cursor-pointer hover:bg-surface-container-low"
+  >
+    Shop Merch
+  </button>
+</div>
                 </div>
 
                 <div className="flex-1 w-full max-w-md md:max-w-none relative">
