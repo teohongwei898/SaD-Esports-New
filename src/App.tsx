@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import { 
-  Twitter, 
-  Mail, 
-  ChevronLeft, 
-  ChevronRight, 
-  Gamepad2, 
-  Calendar 
+import {
+  Twitter,
+  Mail,
+  ChevronLeft,
+  ChevronRight,
+  Gamepad2,
+  Calendar,
 } from 'lucide-react';
 
 import { Header } from './components/Header';
@@ -20,7 +20,6 @@ export default function App() {
   const [contactOpen, setContactOpen] = useState(false);
   const matchScrollRef = useRef<HTMLDivElement>(null);
 
-  // Simple Notification Toast State
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   useEffect(() => {
@@ -38,21 +37,16 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-on-background relative font-sans">
-      {/* Dynamic Watermark Background */}
       <div className="absolute inset-0 paw-pattern-bg -z-10 pointer-events-none"></div>
 
-      {/* Header component */}
-      <Header 
-        activeTab={activeTab} 
-        setActiveTab={setActiveTab} 
-        onJoinDiscord={() => {}} 
+      <Header
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        onJoinDiscord={() => {}}
       />
 
-      {/* Main Container */}
       <main className="flex-grow w-full max-w-7xl mx-auto px-4 md:px-16 py-8 relative z-10">
         <AnimatePresence mode="wait">
-          {/* Active views loaded dynamically with gorgeous transitions */}
-
           {/* HOME VIEW */}
           {activeTab === 'home' && (
             <motion.div
@@ -73,9 +67,10 @@ export default function App() {
                     Nurturing <span className="text-primary text-stroke">Champions.</span> Supplying the Future.
                   </h1>
                   <p className="text-lg font-semibold text-on-surface-variant max-w-lg leading-relaxed">
-                    Welcome to the home of SaD Esports. Our mission is centered around supplying the next generation of top-tier competitive esports talent. Track our journey to VCL victory.
+                    Welcome to the home of SaD Esports. Our mission is centered around supplying the next generation of
+                    top-tier competitive esports talent. Track our journey to VCL victory.
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-4 pt-4">
                     <div className="relative group">
                       <button
@@ -86,14 +81,20 @@ export default function App() {
                         <span className="material-symbols-outlined text-[18px]">expand_more</span>
                       </button>
                       <div className="absolute left-0 mt-2 w-48 bg-surface-container-lowest border-2 border-on-surface rounded-lg shadow-[4px_4px_0px_0px_rgba(26,28,30,1)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-155 z-20">
-                        <button 
-                          onClick={(e) => { e.stopPropagation(); setActiveTab('vcl'); }} 
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActiveTab('vcl');
+                          }}
                           className="w-full text-left block px-4 py-2.5 hover:bg-primary-container hover:text-on-primary-container text-xs font-black cursor-pointer"
                         >
                           VCL Main Team
                         </button>
-                        <button 
-                          onClick={(e) => { e.stopPropagation(); setActiveTab('gc'); }} 
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActiveTab('gc');
+                          }}
                           className="w-full text-left block px-4 py-2.5 hover:bg-primary-container hover:text-on-primary-container text-xs font-black cursor-pointer"
                         >
                           Game Changers
@@ -101,7 +102,9 @@ export default function App() {
                       </div>
                     </div>
                     <button
-                      onClick={() => triggerToast("🛒 Merch store opening in Summer 2026! Get ready for the drop.")}
+                      onClick={() =>
+                        triggerToast('🛒 Merch store opening in Summer 2026! Get ready for the drop.')
+                      }
                       className="bg-surface-container-lowest text-on-surface hard-shadow-btn px-8 py-3.5 rounded-lg font-black text-xs cursor-pointer hover:bg-surface-container-low"
                     >
                       Shop Merch
@@ -110,7 +113,6 @@ export default function App() {
                 </div>
 
                 <div className="flex-1 w-full max-w-md md:max-w-none relative">
-                  {/* Bear mascot container */}
                   <div className="relative w-full aspect-[0.95] md:aspect-[0.9] rounded-2xl overflow-hidden border-4 border-on-surface shadow-[8px_8px_0px_0px_rgba(26,28,30,1)] bg-surface-container-highest flex items-center justify-center p-6 group cursor-pointer">
                     <div className="absolute inset-0 bg-primary-container/10 group-hover:scale-105 transition-transform duration-300"></div>
                     <img
@@ -119,9 +121,10 @@ export default function App() {
                       src={MASCOT_IMAGE_URL}
                     />
                   </div>
-                  {/* Star Emblem Accent */}
                   <div className="absolute -top-6 -right-6 w-24 h-24 bg-secondary-container rounded-full border-3 border-on-surface shadow-[4px_4px_0px_0px_rgba(26,28,30,1)] -z-10 flex items-center justify-center animate-spin-slow">
-                    <span className="material-symbols-outlined text-[42px] text-on-secondary-container font-black">star</span>
+                    <span className="material-symbols-outlined text-[42px] text-on-secondary-container font-black">
+                      star
+                    </span>
                   </div>
                 </div>
               </section>
@@ -130,11 +133,15 @@ export default function App() {
               <section className="relative py-4 border-t-3 border-on-surface/30">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 pt-4">
                   <div>
-                    <span className="text-xs font-black uppercase text-primary tracking-widest block">VCT Challengers</span>
+                    <span className="text-xs font-black uppercase text-primary tracking-widest block">
+                      VCT Challengers
+                    </span>
                     <h2 className="text-2xl md:text-3xl font-black text-on-surface">Recent & Active Matches</h2>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="text-xs font-bold text-outline-variant italic hidden md:inline">Scroll or use buttons</span>
+                    <span className="text-xs font-bold text-outline-variant italic hidden md:inline">
+                      Scroll or use buttons
+                    </span>
                     <div className="flex gap-2">
                       <button
                         onClick={() => {
@@ -160,7 +167,7 @@ export default function App() {
                   </div>
                 </div>
 
-                <div 
+                <div
                   ref={matchScrollRef}
                   className="flex overflow-x-auto gap-6 pb-4 custom-scrollbar snap-x snap-mandatory scroll-smooth"
                 >
@@ -170,29 +177,27 @@ export default function App() {
                       className="min-w-[300px] md:min-w-[380px] hard-shadow-card rounded-xl p-6 bg-surface-container-lowest snap-center shrink-0 flex flex-col justify-between border-3 border-on-surface"
                     >
                       <div>
-                        {/* Match header */}
                         <div className="flex justify-between items-center mb-4 border-b-2 border-surface-variant pb-3">
-                          <span className="font-extrabold text-xs text-outline tracking-wider uppercase">{match.stage}</span>
-                          <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-black border border-on-surface/20 shadow-[1px_1px_0px_0px_rgba(26,28,30,1)] ${
-                            match.status === 'WIN' 
-                              ? 'bg-tertiary-container text-on-tertiary' 
-                              : match.status === 'LOSS'
-                              ? 'bg-red-100 text-red-800'
-                              : 'bg-primary-fixed text-on-primary-fixed'
-                          }`}>
+                          <span className="font-extrabold text-xs text-outline tracking-wider uppercase">
+                            {match.stage}
+                          </span>
+                          <span
+                            className={`px-2.5 py-0.5 rounded-full text-[10px] font-black border border-on-surface/20 shadow-[1px_1px_0px_0px_rgba(26,28,30,1)] ${
+                              match.status === 'WIN'
+                                ? 'bg-tertiary-container text-on-tertiary'
+                                : match.status === 'LOSS'
+                                ? 'bg-red-100 text-red-800'
+                                : 'bg-primary-fixed text-on-primary-fixed'
+                            }`}
+                          >
                             {match.status}
                           </span>
                         </div>
 
-                        {/* Teams row */}
                         <div className="flex justify-between items-center my-6">
                           <div className="flex flex-col items-center gap-2 flex-1">
                             <div className="w-12 h-12 bg-white rounded-full border-2 border-on-surface flex items-center justify-center overflow-hidden p-1">
-                              <img
-                                alt="SaD Logo"
-                                className="w-full h-full object-contain"
-                                src={MASCOT_IMAGE_URL}
-                              />
+                              <img alt="SaD Logo" className="w-full h-full object-contain" src={MASCOT_IMAGE_URL} />
                             </div>
                             <span className="font-black text-sm text-on-surface">SaD</span>
                           </div>
@@ -207,7 +212,9 @@ export default function App() {
                                 VS
                               </div>
                             )}
-                            <span className="text-[10px] uppercase font-black text-outline tracking-wider mt-1">Result</span>
+                            <span className="text-[10px] uppercase font-black text-outline tracking-wider mt-1">
+                              Result
+                            </span>
                           </div>
 
                           <div className="flex flex-col items-center gap-2 flex-1">
@@ -215,7 +222,7 @@ export default function App() {
                               <img
                                 alt={`${match.opponent} Logo`}
                                 className="w-full h-full object-contain"
-                                src={match.opponentLogoUrl} 
+                                src={match.opponentLogoUrl}
                               />
                             </div>
                             <span className="font-black text-sm text-on-surface-variant">{match.opponent}</span>
@@ -255,89 +262,87 @@ export default function App() {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-black text-on-surface leading-tight">
                   Our <span className="text-primary">Mischievous</span> Partners
                 </h1>
-                
-                {/* Thick Outlined box */}
+
                 <div className="mt-6 bg-surface-container-lowest border-3 border-on-surface p-6 rounded-xl shadow-[4px_4px_0px_0px_rgba(26,28,30,1)]">
                   <p className="text-sm font-bold text-on-surface-variant leading-relaxed">
-                    We team up with the best brands in the game to bring you top-tier esports entertainment. Support the brands that support the chaos.
+                    We team up with the best brands in the game to bring you top-tier esports entertainment. Support the
+                    brands that support the chaos.
                   </p>
                 </div>
               </div>
 
-              {/* Partners list cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {PARTNERS.map((partner) => {
-  // 1. Define the inner card layout once
-  const cardContent = (
-    <div className="flex flex-col items-center text-center gap-6 h-full justify-between">
-      <div className="flex flex-col items-center text-center gap-6">
-        <div className="w-20 h-20 bg-slate-100 rounded-lg border-2 border-on-surface shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] p-4 flex items-center justify-center">
-          {partner.logoType === 'lightning' && (
-            <div className="text-yellow-500 animate-pulse">
-              <span className="material-symbols-outlined text-[48px] font-black">bolt</span>
-            </div>
-          )}
-          {partner.logoType === 'mouse' && (
-            <div className="text-slate-700">
-              <span className="material-symbols-outlined text-[48px] font-black">mouse</span>
-            </div>
-          )}
-          {partner.logoType === 'shoe' && (
-            <div className="text-slate-600">
-              <span className="material-symbols-outlined text-[48px] font-black">steps</span>
-            </div>
-          )}
-          {partner.logoType === 'server' && (
-            <div className="text-blue-600">
-              <span className="material-symbols-outlined text-[48px] font-black">dns</span>
-            </div>
-          )}
-          {partner.logoType === 'eye' && (
-            <div className="text-emerald-600">
-              <span className="material-symbols-outlined text-[48px] font-black">visibility</span>
-            </div>
-          )}
-        </div>
+                  const cardContent = (
+                    <div className="flex flex-col items-center text-center gap-6 h-full justify-between">
+                      <div className="flex flex-col items-center text-center gap-6">
+                        <div className="w-20 h-20 bg-slate-100 rounded-lg border-2 border-on-surface shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] p-4 flex items-center justify-center">
+                          {partner.logoType === 'lightning' && (
+                            <div className="text-yellow-500 animate-pulse">
+                              <span className="material-symbols-outlined text-[48px] font-black">bolt</span>
+                            </div>
+                          )}
+                          {partner.logoType === 'mouse' && (
+                            <div className="text-slate-700">
+                              <span className="material-symbols-outlined text-[48px] font-black">mouse</span>
+                            </div>
+                          )}
+                          {partner.logoType === 'shoe' && (
+                            <div className="text-slate-600">
+                              <span className="material-symbols-outlined text-[48px] font-black">steps</span>
+                            </div>
+                          )}
+                          {partner.logoType === 'server' && (
+                            <div className="text-blue-600">
+                              <span className="material-symbols-outlined text-[48px] font-black">dns</span>
+                            </div>
+                          )}
+                          {partner.logoType === 'eye' && (
+                            <div className="text-emerald-600">
+                              <span className="material-symbols-outlined text-[48px] font-black">visibility</span>
+                            </div>
+                          )}
+                        </div>
 
-        <div>
-          <h3 className="text-lg font-black text-on-surface mb-2">{partner.name}</h3>
-          <p className="text-xs font-semibold text-on-surface-variant leading-relaxed">
-            {partner.description}
-          </p>
-        </div>
-      </div>
+                        <div>
+                          <h3 className="text-lg font-black text-on-surface mb-2">{partner.name}</h3>
+                          <p className="text-xs font-semibold text-on-surface-variant leading-relaxed">
+                            {partner.description}
+                          </p>
+                        </div>
+                      </div>
 
-      {partner.url && (
-        <div className="text-xs font-black text-primary hover:underline mt-2 flex items-center gap-1">
-          Visit Brand Website ↗
-        </div>
-      )}
-    </div>
-  );
+                      {partner.url && (
+                        <div className="text-xs font-black text-primary hover:underline mt-2 flex items-center gap-1">
+                          Visit Brand Website ↗
+                        </div>
+                      )}
+                    </div>
+                  );
 
-  const baseClassName = "hard-shadow-card rounded-xl p-6 bg-surface-container-lowest border-3 border-on-surface block transition-transform duration-200";
+                  const baseClassName =
+                    'hard-shadow-card rounded-xl p-6 bg-surface-container-lowest border-3 border-on-surface block transition-transform duration-200';
 
-  // 2. Render either an 'a' element or a 'div' element wrapping the content cleanly
-  if (partner.url) {
-    return (
-      <a
-        key={partner.id}
-        href={partner.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`${baseClassName} cursor-pointer hover:-translate-y-1`}
-      >
-        {cardContent}
-      </a>
-    );
-  }
+                  if (partner.url) {
+                    return (
+                      <a
+                        key={partner.id}
+                        href={partner.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`${baseClassName} cursor-pointer hover:-translate-y-1`}
+                      >
+                        {cardContent}
+                      </a>
+                    );
+                  }
 
-  return (
-    <div key={partner.id} className={baseClassName}>
-      {cardContent}
-    </div>
-  );
-})}
+                  return (
+                    <div key={partner.id} className={baseClassName}>
+                      {cardContent}
+                    </div>
+                  );
+                })}
 
                 {/* Card 6: Join the Pack (Blue) */}
                 <div className="bg-primary text-on-primary border-3 border-on-surface rounded-xl p-6 flex flex-col justify-between items-center text-center gap-6 shadow-[4px_4px_0px_0px_rgba(26,28,30,1)] transition-transform hover:-translate-y-1">
@@ -371,7 +376,6 @@ export default function App() {
               transition={{ duration: 0.25 }}
               className="flex flex-col gap-12"
             >
-              {/* Header block with VCL Highlight Banner */}
               <section className="flex flex-col gap-6 mt-4">
                 <div className="bg-primary/5 border-3 border-on-surface rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(26,28,30,1)] flex flex-col md:flex-row gap-8 items-center justify-between text-left">
                   <div className="flex flex-col gap-5 items-start">
@@ -387,18 +391,19 @@ export default function App() {
                       The <span className="text-primary font-extrabold underline decoration-wavy decoration-3 underline-offset-8">Kings</span> of Chaos.
                     </h1>
                     <p className="text-sm font-semibold text-on-surface-variant max-w-2xl leading-relaxed">
-                      Meet our premier VCL roster dominating Split 3. Unconventional tacticians, crispy headshots, and an unrelenting drive to secure the trophy.
+                      Meet our premier VCL roster dominating Split 3. Unconventional tacticians, crispy headshots, and an
+                      unrelenting drive to secure the trophy.
                     </p>
                   </div>
 
-                  {/* Decorative badge cup emblem */}
                   <div className="shrink-0 w-24 h-24 bg-blue-100 text-blue-700 border-3 border-on-surface rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_rgba(26,28,30,1)]">
-                    <span className="material-symbols-outlined text-[48px] font-black text-primary animate-pulse">emoji_events</span>
+                    <span className="material-symbols-outlined text-[48px] font-black text-primary animate-pulse">
+                      emoji_events
+                    </span>
                   </div>
                 </div>
               </section>
 
-              {/* Roster Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {PLAYERS.filter((p) => p.team === 'VCL').map((player) => {
                   const idIgl = player.role === 'IGL / CAPTAIN';
@@ -409,32 +414,33 @@ export default function App() {
                         idIgl ? 'md:col-span-2 flex-row gap-6 p-8 items-center' : ''
                       }`}
                     >
-                      <div className={`flex ${idIgl ? 'flex-row gap-6 items-center flex-1' : 'flex-col items-center text-center gap-4'}`}>
-                        {/* Avatar representation with specific styled layout */}
+                      <div
+                        className={`flex ${
+                          idIgl ? 'flex-row gap-6 items-center flex-1' : 'flex-col items-center text-center gap-4'
+                        }`}
+                      >
                         <div className="relative">
                           {idIgl && (
                             <span className="absolute -top-3 -left-3 bg-secondary-container border border-on-surface text-[10px] uppercase font-black px-2 py-0.5 rounded-full rotate-[-6deg] shadow-xs z-10">
                               IGL/CO-LEAD
                             </span>
                           )}
-                          
                           {player.avatarUrl ? (
-                            <img 
-                              src={player.avatarUrl} 
-                              alt={`${player.nickname}'s avatar`} 
+                            <img
+                              src={player.avatarUrl}
+                              alt={`${player.nickname}'s avatar`}
                               className={`rounded-full object-cover border-2 border-on-surface bg-zinc-800 ${
                                 idIgl ? 'w-28 h-28 md:w-36 md:h-36' : 'w-24 h-24'
                               }`}
                             />
                           ) : (
-                            <Avatar 
-                              style={player.avatarStyle || { skinColor: '#fdf2f8' }} 
-                              className={`${idIgl ? 'w-28 h-28 md:w-36 md:h-36' : 'w-24 h-24'}`} 
+                            <Avatar
+                              style={player.avatarStyle || { skinColor: '#fdf2f8' }}
+                              className={`${idIgl ? 'w-28 h-28 md:w-36 md:h-36' : 'w-24 h-24'}`}
                             />
                           )}
                         </div>
 
-                        {/* Player details */}
                         <div className={`flex flex-col ${idIgl ? 'items-start text-left' : 'items-center'} gap-2`}>
                           <div className="flex items-center gap-2">
                             <span className="bg-primary/10 text-primary border border-primary/30 px-2 py-0.5 rounded-full text-[10px] font-black uppercase">
@@ -449,7 +455,6 @@ export default function App() {
                         </div>
                       </div>
 
-                      {/* Social/Trigger Row */}
                       <div className={`flex gap-3 mt-6 ${idIgl ? 'flex-col' : 'justify-center w-full border-t-2 border-surface-variant pt-4'}`}>
                         <a
                           href={player.twitterUrl}
@@ -477,7 +482,6 @@ export default function App() {
                 })}
               </div>
 
-              {/* Bottom Schedule Card */}
               <div className="bg-primary/10 border-3 border-on-surface rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(26,28,30,1)] flex flex-col md:flex-row justify-between items-center gap-6 mt-8">
                 <div>
                   <h3 className="text-xl md:text-2xl font-black text-on-surface mb-2">Want to see them in action?</h3>
@@ -507,7 +511,6 @@ export default function App() {
               transition={{ duration: 0.25 }}
               className="flex flex-col gap-12"
             >
-              {/* Header with Star and GC highlight banner */}
               <section className="flex flex-col gap-6 mt-4">
                 <div className="bg-pink-500/5 border-3 border-on-surface rounded-2xl p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(26,28,30,1)] flex flex-col md:flex-row gap-8 items-center justify-between text-left">
                   <div className="flex flex-col gap-5 items-start">
@@ -523,73 +526,72 @@ export default function App() {
                       The <span className="text-pink-500 font-extrabold underline decoration-wavy decoration-3 underline-offset-8">Queens</span> of SaD.
                     </h1>
                     <p className="text-sm font-semibold text-on-surface-variant max-w-2xl leading-relaxed">
-                      Fierce, unyielding, and focused on greatness. Meet the formidable squad tearing through the Game Changers circuit. Expect no mercy, just absolute dominance.
+                      Fierce, unyielding, and focused on greatness. Meet the formidable squad tearing through the Game
+                      Changers circuit. Expect no mercy, just absolute dominance.
                     </p>
                   </div>
 
-                  {/* Decorative simple group sparkler emblem */}
                   <div className="shrink-0 w-24 h-24 bg-pink-100 text-pink-700 border-3 border-on-surface rounded-full flex items-center justify-center shadow-[3px_3px_0px_0px_rgba(26,28,30,1)]">
-                    <span className="material-symbols-outlined text-[48px] font-black text-pink-600 animate-pulse">sparkles</span>
+                    <span className="material-symbols-outlined text-[48px] font-black text-pink-600 animate-pulse">
+                      sparkles
+                    </span>
                   </div>
                 </div>
               </section>
 
-              {/* Starting Lineup Section */}
               <section className="pt-4 border-t-3 border-on-surface/30">
                 <h2 className="text-2xl font-black text-on-surface mb-8 border-b-3 border-on-surface text-left pb-1 inline-block">
                   Starting Lineup
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {PLAYERS.filter((p) => p.team === 'GC').map((player) => {
-                    return (
-                      <div
-                        key={player.id}
-                        className="hard-shadow-card rounded-xl border-3 border-on-surface bg-surface-container-lowest p-6 flex flex-col justify-between"
-                      >
-                        <div className="relative">
-                          {/* Circle Avatar Clip and Role Header */}
-                          <div className="flex flex-col items-center gap-4 text-center">
-                            <span className="bg-slate-100 border border-slate-300 text-slate-800 text-[10px] font-black tracking-wider uppercase px-2 py-0.5 rounded-full mt-1">
-                              👑 {player.role}
+                  {PLAYERS.filter((p) => p.team === 'GC').map((player) => (
+                    <div
+                      key={player.id}
+                      className="hard-shadow-card rounded-xl border-3 border-on-surface bg-surface-container-lowest p-6 flex flex-col justify-between"
+                    >
+                      <div className="relative">
+                        <div className="flex flex-col items-center gap-4 text-center">
+                          <span className="bg-slate-100 border border-slate-300 text-slate-800 text-[10px] font-black tracking-wider uppercase px-2 py-0.5 rounded-full mt-1">
+                            👑 {player.role}
+                          </span>
+                          <Avatar style={player.avatarStyle} className="w-24 h-24" />
+                          <div>
+                            <h3 className="text-xl font-black text-on-surface">"{player.nickname}"</h3>
+                            <span className="text-xs text-outline font-extrabold italic uppercase">
+                              {player.realName}
                             </span>
-                            <Avatar style={player.avatarStyle} className="w-24 h-24" />
-                            <div>
-                              <h3 className="text-xl font-black text-on-surface">"{player.nickname}"</h3>
-                              <span className="text-xs text-outline font-extrabold italic uppercase">{player.realName}</span>
-                            </div>
-                            <p className="text-xs font-semibold text-on-surface-variant leading-relaxed max-w-xs">
-                              {player.bio}
-                            </p>
                           </div>
-                        </div>
-
-                        {/* Gaming Profile Button & Social buttons */}
-                        <div className="flex gap-2.5 mt-6 border-t-2 border-surface-variant pt-4 items-center">
-                          <a
-                            href={player.twitterUrl}
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            className="p-2 border-2 border-on-surface rounded-lg hover:bg-slate-100 transition-colors shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] active:translate-y-0.5 flex items-center justify-center"
-                            title={`Twitter Profile: ${player.twitter}`}
-                            aria-label="Twitter profile"
-                          >
-                            <Twitter className="w-4 h-4 text-on-surface" />
-                          </a>
-                          
-                          <a
-                            href={player.gameProfileUrl}
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            className="flex-1 py-1.5 bg-secondary-container text-on-secondary-container border-2 border-on-surface rounded-lg font-black text-[11px] shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] hover:bg-yellow-300 transition-all flex items-center justify-center gap-1 cursor-pointer"
-                            title={`Gaming Profile: ${player.gameProfile}`}
-                          >
-                            👾 Gaming Profile
-                          </a>
+                          <p className="text-xs font-semibold text-on-surface-variant leading-relaxed max-w-xs">
+                            {player.bio}
+                          </p>
                         </div>
                       </div>
-                    );
-                  })}
+
+                      <div className="flex gap-2.5 mt-6 border-t-2 border-surface-variant pt-4 items-center">
+                        <a
+                          href={player.twitterUrl}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          className="p-2 border-2 border-on-surface rounded-lg hover:bg-slate-100 transition-colors shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] active:translate-y-0.5 flex items-center justify-center"
+                          title={`Twitter Profile: ${player.twitter}`}
+                          aria-label="Twitter profile"
+                        >
+                          <Twitter className="w-4 h-4 text-on-surface" />
+                        </a>
+
+                        <a
+                          href={player.gameProfileUrl}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          className="flex-1 py-1.5 bg-secondary-container text-on-secondary-container border-2 border-on-surface rounded-lg font-black text-[11px] shadow-[2px_2px_0px_0px_rgba(26,28,30,1)] hover:bg-yellow-300 transition-all flex items-center justify-center gap-1 cursor-pointer"
+                          title={`Gaming Profile: ${player.gameProfile}`}
+                        >
+                          👾 Gaming Profile
+                        </a>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </section>
             </motion.div>
@@ -605,7 +607,6 @@ export default function App() {
               transition={{ duration: 0.25 }}
               className="flex flex-col gap-16"
             >
-              {/* Header */}
               <div className="text-center max-w-3xl mx-auto my-4">
                 <span className="bg-primary-fixed text-on-primary-fixed border border-on-surface px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-3 inline-block">
                   Staff Directory
@@ -614,11 +615,11 @@ export default function App() {
                   The Minds Behind the Mischief
                 </h1>
                 <p className="text-sm font-bold text-on-surface-variant mt-4 leading-relaxed max-w-xl mx-auto">
-                  Meet the management and coaching staff steering SaD Esports to victory. A mix of strategic brilliance and chaotic energy.
+                  Meet the management and coaching staff steering SaD Esports to victory. A mix of strategic brilliance
+                  and chaotic energy.
                 </p>
               </div>
 
-              {/* Management Section */}
               <section className="relative">
                 <div className="flex items-center gap-3 mb-8 border-b-2 border-on-surface/20 pb-3">
                   <div className="w-3 h-8 bg-primary rounded-full border border-on-surface"></div>
@@ -635,11 +636,11 @@ export default function App() {
                         <Avatar style={member.avatarStyle} className="w-20 h-20" />
                         <div>
                           <h3 className="text-lg font-black text-on-surface">{member.nickname}</h3>
-                          <span className="text-xs text-primary font-black uppercase tracking-wide italic">{member.role}</span>
+                          <span className="text-xs text-primary font-black uppercase tracking-wide italic">
+                            {member.role}
+                          </span>
                         </div>
-                        <p className="text-xs font-semibold text-on-surface-variant leading-relaxed">
-                          {member.bio}
-                        </p>
+                        <p className="text-xs font-semibold text-on-surface-variant leading-relaxed">{member.bio}</p>
                       </div>
 
                       <div className="flex gap-2 mt-6 border-t-2 border-surface-variant pt-4 justify-center">
@@ -669,7 +670,6 @@ export default function App() {
                 </div>
               </section>
 
-              {/* Coaching Staff section */}
               <section className="relative pt-4 border-t-3 border-on-surface/30">
                 <div className="flex items-center gap-3 mb-8 border-b-2 border-on-surface/20 pb-3">
                   <div className="w-3.5 h-3.5 rounded-full bg-secondary-container border border-on-surface"></div>
@@ -683,13 +683,15 @@ export default function App() {
                       className="hard-shadow-card rounded-xl border-3 border-on-surface bg-surface-container-lowest p-5 flex flex-col justify-between relative"
                     >
                       {member.badge && (
-                        <span className={`absolute top-3 right-3 border border-on-surface text-[9px] font-black px-2 py-0.5 rounded-md shadow-[1px_1px_0px_0px_rgba(26,28,30,1)] uppercase tracking-wider ${
-                          member.badge === 'VCL' 
-                            ? 'bg-blue-100 text-blue-800' 
-                            : member.badge === 'GC'
-                            ? 'bg-pink-100 text-pink-800'
-                            : 'bg-zinc-100 text-zinc-800'
-                        }`}>
+                        <span
+                          className={`absolute top-3 right-3 border border-on-surface text-[9px] font-black px-2 py-0.5 rounded-md shadow-[1px_1px_0px_0px_rgba(26,28,30,1)] uppercase tracking-wider ${
+                            member.badge === 'VCL'
+                              ? 'bg-blue-100 text-blue-800'
+                              : member.badge === 'GC'
+                              ? 'bg-pink-100 text-pink-800'
+                              : 'bg-zinc-100 text-zinc-800'
+                          }`}
+                        >
                           {member.badge}
                         </span>
                       )}
@@ -730,24 +732,19 @@ export default function App() {
               </section>
             </motion.div>
           )}
-
         </AnimatePresence>
       </main>
 
-      {/* Footer Container */}
-      <Footer 
-        setActiveTab={setActiveTab} 
-        onJoinDiscord={() => {}} 
-        onShowTwitter={() => triggerToast("🐦 Follow @SaDEsports on X (Twitter) for live roster updates and scrim streams!")} 
+      <Footer
+        setActiveTab={setActiveTab}
+        onJoinDiscord={() => {}}
+        onShowTwitter={() =>
+          triggerToast('🐦 Follow @SaDEsports on X (Twitter) for live roster updates and scrim streams!')
+        }
       />
 
-      {/* INTERACTIVE MODALS */}
-      <ContactModal 
-        isOpen={contactOpen} 
-        onClose={() => setContactOpen(false)} 
-      />
+      <ContactModal isOpen={contactOpen} onClose={() => setContactOpen(false)} />
 
-      {/* TOASTER COMPONENT */}
       <AnimatePresence>
         {toastMessage && (
           <motion.div
