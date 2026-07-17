@@ -365,7 +365,7 @@ export default function App() {
                     Contact Us <span className="material-symbols-outlined text-[16px] font-bold">arrow_forward</span>
                   </button>
                 </div>
-              </div>
+      
             </motion.div>
           )}
 
