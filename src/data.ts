@@ -60,7 +60,7 @@ export const MATCHES: Match[] = [
   {
     id: 'm5',
     stage: 'VCL 2026: North America ACE Stage 3',
-    opponent: 'Nightblood Gaming',
+    opponent: 'NBG',
     scoreSaD: 1,
     scoreOpp: 2,
     status: 'LOSS',
@@ -99,7 +99,7 @@ export const MATCHES: Match[] = [
   {
     id: 'm8',
     stage: 'VCL 2026: North America ACE Stage 3',
-    opponent: 'Shopify Rebellion Black',
+    opponent: 'SRB',
     scoreSaD: 2,
     scoreOpp: 1,
     status: 'WIN',
@@ -125,7 +125,7 @@ export const MATCHES: Match[] = [
   {
     id: 'm10',
     stage: 'VCL 2026: North America ACE Stage 3',
-    opponent: 'Shopify Rebellion Black',
+    opponent: 'SRB',
     scoreSaD: 0,
     scoreOpp: 3,
     status: 'LOSS',
