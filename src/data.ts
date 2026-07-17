@@ -156,12 +156,14 @@ export const PARTNERS: Partner[] = [
     name: 'CRIT',
     logoType: 'shoe',
     description: 'Premier apparel company supplying top-tier gaming wear and performance aesthetics to the next generation of talent.'
+    url: 'https://critapparel.com/products/sad-esports-jersey'
   },
   {
     id: 'p2',
     name: 'COMPREADY',
     logoType: 'server',
     description: 'Specializing in hyper-optimized PC tuning and custom operating setups for peak performance.'
+    url: 'https://www.hypertune.gg/?am_id=sadesports'
   },
   {
     id: 'p3',
