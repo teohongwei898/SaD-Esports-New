@@ -56,6 +56,97 @@ export const MATCHES: Match[] = [
     date: '2026-06-19',
     time: '19:00',
     statsUrl: 'https://www.vlr.gg/688234/m80-vs-sad-esports-challengers-2026-north-america-ace-stage-3-r4-3-0'
+  },
+  {
+    id: 'm5',
+    stage: 'VCL 2026: North America ACE Stage 3',
+    opponent: 'Nightblood Gaming',
+    scoreSaD: 1,
+    scoreOpp: 2,
+    status: 'LOSS',
+    opponentLogo: 'NBG',
+    opponentLogoUrl: 'https://owcdn.net/img/61f13e1258cab.png',
+    date: '2026-06-26',
+    time: '04:00',
+    statsUrl: 'https://www.vlr.gg/701231/nightblood-gaming-vs-sad-esports-challengers-2026-north-america-ace-stage-3-r5-3-1'
+  },
+  {
+    id: 'm6',
+    stage: 'VCL 2026: North America ACE Stage 3',
+    opponent: 'Evictix',
+    scoreSaD: 2,
+    scoreOpp: 1,
+    status: 'WIN',
+    opponentLogo: 'EVX',
+    opponentLogoUrl: 'https://owcdn.net/img/6a32243d7f7df.png',
+    date: '2026-06-27',
+    time: '04:00',
+    statsUrl: 'https://www.vlr.gg/706323/sad-esports-vs-evictix-challengers-2026-north-america-ace-stage-3-r6-3-2-vs-2-3'
+  },
+  {
+    id: 'm7',
+    stage: 'VCL 2026: North America ACE Stage 3',
+    opponent: 'NRG Academy',
+    scoreSaD: 2,
+    scoreOpp: 0,
+    status: 'WIN',
+    opponentLogo: 'NRG',
+    opponentLogoUrl: 'https://owcdn.net/img/6610f026c1a9e.png', // Reused from m3
+    date: '2026-07-04',
+    time: '04:00',
+    statsUrl: 'https://www.vlr.gg/707769/sad-esports-vs-nrg-academy-challengers-2026-north-america-ace-stage-3-ubqf'
+  },
+  {
+    id: 'm8',
+    stage: 'VCL 2026: North America ACE Stage 3',
+    opponent: 'Shopify Rebellion Black',
+    scoreSaD: 2,
+    scoreOpp: 1,
+    status: 'WIN',
+    opponentLogo: 'SRB',
+    opponentLogoUrl: 'https://owcdn.net/img/679314c8ac387.png',
+    date: '2026-07-06',
+    time: '06:20',
+    statsUrl: 'https://www.vlr.gg/707772/sad-esports-vs-shopify-rebellion-black-challengers-2026-north-america-ace-stage-3-ubsf'
+  },
+  {
+    id: 'm9',
+    stage: 'VCL 2026: North America ACE Stage 3',
+    opponent: 'M80',
+    scoreSaD: 0,
+    scoreOpp: 2,
+    status: 'LOSS',
+    opponentLogo: 'M80',
+    opponentLogoUrl: 'https://owcdn.net/img/6945c73504452.png', // Reused from m4
+    date: '2026-07-11',
+    time: '04:00',
+    statsUrl: 'https://www.vlr.gg/707773/m80-vs-sad-esports-challengers-2026-north-america-ace-stage-3-ubf'
+  },
+  {
+    id: 'm10',
+    stage: 'VCL 2026: North America ACE Stage 3',
+    opponent: 'Shopify Rebellion Black',
+    scoreSaD: 0,
+    scoreOpp: 3,
+    status: 'LOSS',
+    opponentLogo: 'SRB',
+    opponentLogoUrl: 'https://owcdn.net/img/679314c8ac387.png', // Reused from m8
+    date: '2026-07-12',
+    time: '04:00',
+    statsUrl: 'https://www.vlr.gg/707780/sad-esports-vs-shopify-rebellion-black-challengers-2026-north-america-ace-stage-3-lbf'
+  },
+  {
+    id: 'm11',
+    stage: 'Game Changers 2026: North America Stage 2',
+    opponent: ':3',
+    scoreSaD: 2,
+    scoreOpp: 1,
+    status: 'WIN',
+    opponentLogo: ':3',
+    opponentLogoUrl: 'https://owcdn.net/img/6519ca99df26a.png', // Placeholder since no logo url was provided
+    date: '2026-07-14',
+    time: '07:15',
+    statsUrl: 'https://www.vlr.gg/team/13565/3'
   }
 ];
 
