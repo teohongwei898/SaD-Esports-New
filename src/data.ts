@@ -137,7 +137,7 @@ export const MATCHES: Match[] = [
   },
   {
     id: 'm11',
-    stage: 'Game Changers 2026: North America Stage 2',
+    stage: 'GC 2026: North America Stage 2',
     opponent: ':3',
     scoreSaD: 2,
     scoreOpp: 1,
