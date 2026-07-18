@@ -18,7 +18,7 @@ export function MerchModal({ isOpen, onClose }: MerchModalProps) {
     },
     {
       name: 'Raven.gg',
-      url: 'https://raven.gg',
+      url: 'https://raven.gg/stores/sad-esports/',
       icon: '🛍️',
       description: 'Exclusive esports merchandise and collectibles'
     }
