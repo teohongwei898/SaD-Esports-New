@@ -13,11 +13,13 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Avatar } from './components/Avatar';
 import { ContactModal } from './components/DynamicModals';
+import { MerchModal } from './components/MerchModal';
 import { MATCHES, PARTNERS, PLAYERS, STAFF, MASCOT_IMAGE_URL, SCHEDULE_URL } from './data';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
   const [contactOpen, setContactOpen] = useState(false);
+  const [merchOpen, setMerchOpen] = useState(false);
   const matchScrollRef = useRef<HTMLDivElement>(null);
 
   const [toastMessage, setToastMessage] = useState<string | null>(null);
@@ -64,44 +66,44 @@ export default function App() {
                   </p>
 
                   <div className="flex flex-wrap gap-4 pt-4">
-  <div className="relative group">
-    <button
-      onClick={() => setActiveTab('vcl')}
-      className="bg-primary text-on-primary hard-shadow-btn px-8 py-3.5 rounded-lg font-black text-xs flex items-center gap-2 cursor-pointer"
-    >
-      View Rosters
-      <span className="material-symbols-outlined text-[18px]">expand_more</span>
-    </button>
+                    <div className="relative group">
+                      <button
+                        onClick={() => setActiveTab('vcl')}
+                        className="bg-primary text-on-primary hard-shadow-btn px-8 py-3.5 rounded-lg font-black text-xs flex items-center gap-2 cursor-pointer"
+                      >
+                        View Rosters
+                        <span className="material-symbols-outlined text-[18px]">expand_more</span>
+                      </button>
 
-    <div className="absolute left-0 mt-2 w-48 bg-surface-container-lowest border-2 border-on-surface rounded-lg shadow-[4px_4px_0px_0px_rgba(26,28,30,1)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-20">
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          setActiveTab('vcl');
-        }}
-        className="w-full text-left block px-4 py-2.5 hover:bg-primary-container hover:text-on-primary-container text-xs font-black cursor-pointer"
-      >
-        VCL Main Team
-      </button>
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          setActiveTab('gc');
-        }}
-        className="w-full text-left block px-4 py-2.5 hover:bg-primary-container hover:text-on-primary-container text-xs font-black cursor-pointer"
-      >
-        Game Changers
-      </button>
-    </div>
-  </div>
+                      <div className="absolute left-0 mt-2 w-48 bg-surface-container-lowest border-2 border-on-surface rounded-lg shadow-[4px_4px_0px_0px_rgba(26,28,30,1)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-20">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActiveTab('vcl');
+                          }}
+                          className="w-full text-left block px-4 py-2.5 hover:bg-primary-container hover:text-on-primary-container text-xs font-black cursor-pointer"
+                        >
+                          VCL Main Team
+                        </button>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActiveTab('gc');
+                          }}
+                          className="w-full text-left block px-4 py-2.5 hover:bg-primary-container hover:text-on-primary-container text-xs font-black cursor-pointer"
+                        >
+                          Game Changers
+                        </button>
+                      </div>
+                    </div>
 
-  <button
-    onClick={() => triggerToast('🛒 Merch store opening in Summer 2026! Get ready for the drop.')}
-    className="bg-surface-container-lowest text-on-surface hard-shadow-btn px-8 py-3.5 rounded-lg font-black text-xs cursor-pointer hover:bg-surface-container-low"
-  >
-    Shop Merch
-  </button>
-</div>
+                    <button
+                      onClick={() => setMerchOpen(true)}
+                      className="bg-surface-container-lowest text-on-surface hard-shadow-btn px-8 py-3.5 rounded-lg font-black text-xs cursor-pointer hover:bg-surface-container-low"
+                    >
+                      Shop Merch
+                    </button>
+                  </div>
                 </div>
 
                 <div className="flex-1 w-full max-w-md md:max-w-none relative">
@@ -730,6 +732,7 @@ export default function App() {
         onShowTwitter={() => triggerToast('🐦 Follow @SaDEsports on X (Twitter) for live roster updates and scrim streams!')}
       />
 
+      <MerchModal isOpen={merchOpen} onClose={() => setMerchOpen(false)} />
       <ContactModal isOpen={contactOpen} onClose={() => setContactOpen(false)} />
 
       <AnimatePresence>
