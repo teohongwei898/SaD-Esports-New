@@ -8,6 +8,136 @@ export const MATCHES: Match[] = [
   {
     id: 'm1',
     stage: 'GC 2026: North America Stage 2',
+    opponent: 'ORA Temper',
+    scoreSaD: 0,
+    scoreOpp: 2,
+    status: 'LOSS',
+    opponentLogo: 'ORA',
+    opponentLogoUrl: 'https://owcdn.net/img/6a4957e23db18.png',
+    date: '2026-07-28',
+    time: '05:00',
+    statsUrl: 'https://www.vlr.gg/720391/ora-temper-vs-sad-gc-game-changers-2026-north-america-stage-2-swiss-stage-r3-1-1'
+  },
+  {
+    id: 'm2',
+    stage: 'FunhaverGG WILD//WEST: LAN',
+    opponent: 'NBG',
+    scoreSaD: 2,
+    scoreOpp: 1,
+    status: 'WIN',
+    opponentLogo: 'NBG',
+    opponentLogoUrl: 'https://owcdn.net/img/61f13e1258cab.png',
+    date: '2026-07-27',
+    time: '07:00',
+    statsUrl: 'https://www.vlr.gg/722929/sad-esports-vs-nightblood-gaming-funhavergg-wild-west-lan-gf'
+  },
+  {
+    id: 'm3',
+    stage: 'FunhaverGG WILD//WEST: LAN',
+    opponent: '1Love',
+    scoreSaD: 2,
+    scoreOpp: 1,
+    status: 'WIN',
+    opponentLogo: '1L',
+    opponentLogoUrl: 'https://www.vlr.gg/img/vlr/tmp/vlr.png',
+    date: '2026-07-27',
+    time: '00:30',
+    statsUrl: 'https://www.vlr.gg/722928/sad-esports-vs-1love-funhavergg-wild-west-lan-ubf'
+  },
+  {
+    id: 'm4',
+    stage: 'FunhaverGG WILD//WEST: LAN',
+    opponent: 'barbeque chicken',
+    scoreSaD: 2,
+    scoreOpp: 0,
+    status: 'WIN',
+    opponentLogo: 'BC',
+    opponentLogoUrl: 'https://www.vlr.gg/img/vlr/tmp/vlr.png',
+    date: '2026-07-26',
+    time: '03:00',
+    statsUrl: 'https://www.vlr.gg/722926/barbeque-chicken-vs-sad-esports-funhavergg-wild-west-lan-ubsf'
+  },
+  {
+    id: 'm5',
+    stage: 'FunhaverGG WILD//WEST: LAN',
+    opponent: 'Evictix',
+    scoreSaD: 2,
+    scoreOpp: 0,
+    status: 'WIN',
+    opponentLogo: 'EVX',
+    opponentLogoUrl: 'https://owcdn.net/img/6a32243d7f7df.png',
+    date: '2026-07-26',
+    time: '00:30',
+    statsUrl: 'https://www.vlr.gg/722923/evictix-vs-sad-esports-funhavergg-wild-west-lan-ubqf'
+  },
+  {
+    id: 'm6',
+    stage: 'FunhaverGG WILD//WEST: LAN',
+    opponent: 'ORA Esports',
+    scoreSaD: 2,
+    scoreOpp: 0,
+    status: 'WIN',
+    opponentLogo: 'ORA',
+    opponentLogoUrl: 'https://owcdn.net/img/6978169d8d2df.png',
+    date: '2026-07-25',
+    time: '07:30',
+    statsUrl: 'https://www.vlr.gg/722917/sad-esports-vs-ora-esports-funhavergg-wild-west-lan-uro16'
+  },
+  {
+    id: 'm7',
+    stage: 'FunhaverGG WILD//WEST: LAN',
+    opponent: 'Dictators',
+    scoreSaD: 2,
+    scoreOpp: 1,
+    status: 'WIN',
+    opponentLogo: 'DIC',
+    opponentLogoUrl: 'https://www.vlr.gg/img/vlr/tmp/vlr.png',
+    date: '2026-07-25',
+    time: '04:00',
+    statsUrl: 'https://www.vlr.gg/722538/dictators-vs-sad-esports-funhavergg-wild-west-lan-group-stage-r3'
+  },
+  {
+    id: 'm8',
+    stage: 'FunhaverGG WILD//WEST: LAN',
+    opponent: 'Clovers',
+    scoreSaD: 2,
+    scoreOpp: 0,
+    status: 'WIN',
+    opponentLogo: 'CLV',
+    opponentLogoUrl: 'https://owcdn.net/img/68c61a258e83b.png',
+    date: '2026-07-25',
+    time: '01:30',
+    statsUrl: 'https://www.vlr.gg/722443/sad-esports-vs-clovers-funhavergg-wild-west-lan-group-stage-r2'
+  },
+  {
+    id: 'm9',
+    stage: 'FunhaverGG WILD//WEST: LAN',
+    opponent: 'KOUP',
+    scoreSaD: 2,
+    scoreOpp: 0,
+    status: 'WIN',
+    opponentLogo: 'KOUP',
+    opponentLogoUrl: 'https://www.vlr.gg/img/vlr/tmp/vlr.png',
+    date: '2026-07-24',
+    time: '23:00',
+    statsUrl: 'https://www.vlr.gg/722435/sad-esports-vs-koup-and-friends-funhavergg-wild-west-lan-group-stage-r1'
+  },
+  {
+    id: 'm10',
+    stage: 'GC 2026: North America Stage 2',
+    opponent: 'SwimTrek Blue',
+    scoreSaD: 0,
+    scoreOpp: 2,
+    status: 'LOSS',
+    opponentLogo: 'STB',
+    opponentLogoUrl: 'https://owcdn.net/img/6a5ff0450efba.png',
+    date: '2026-07-21',
+    time: '07:15',
+    statsUrl: 'https://www.vlr.gg/715220/swimtrek-blue-vs-sad-gc-game-changers-2026-north-america-stage-2-swiss-stage-r2-1-0'
+  },
+  {
+    id: 'm11',
+    stage: 'GC 2026: North America Stage 2',
     opponent: ':3',
     scoreSaD: 2,
     scoreOpp: 1,
@@ -19,7 +149,7 @@ export const MATCHES: Match[] = [
     statsUrl: 'https://www.vlr.gg/team/13565/3'
   },
   {
-    id: 'm2',
+    id: 'm12',
     stage: 'VCL 2026: North America ACE Stage 3',
     opponent: 'SRB',
     scoreSaD: 0,
@@ -32,7 +162,7 @@ export const MATCHES: Match[] = [
     statsUrl: 'https://www.vlr.gg/707780/sad-esports-vs-shopify-rebellion-black-challengers-2026-north-america-ace-stage-3-lbf'
   },
   {
-    id: 'm3',
+    id: 'm13',
     stage: 'VCL 2026: North America ACE Stage 3',
     opponent: 'M80',
     scoreSaD: 0,
@@ -45,7 +175,7 @@ export const MATCHES: Match[] = [
     statsUrl: 'https://www.vlr.gg/707773/m80-vs-sad-esports-challengers-2026-north-america-ace-stage-3-ubf'
   },
   {
-    id: 'm4',
+    id: 'm14',
     stage: 'VCL 2026: North America ACE Stage 3',
     opponent: 'SRB',
     scoreSaD: 2,
@@ -58,7 +188,7 @@ export const MATCHES: Match[] = [
     statsUrl: 'https://www.vlr.gg/707772/sad-esports-vs-shopify-rebellion-black-challengers-2026-north-america-ace-stage-3-ubsf'
   },
   {
-    id: 'm5',
+    id: 'm15',
     stage: 'VCL 2026: North America ACE Stage 3',
     opponent: 'NRG Academy',
     scoreSaD: 2,
@@ -71,7 +201,7 @@ export const MATCHES: Match[] = [
     statsUrl: 'https://www.vlr.gg/707769/sad-esports-vs-nrg-academy-challengers-2026-north-america-ace-stage-3-ubqf'
   },
   {
-    id: 'm6',
+    id: 'm16',
     stage: 'VCL 2026: North America ACE Stage 3',
     opponent: 'Evictix',
     scoreSaD: 2,
@@ -84,7 +214,7 @@ export const MATCHES: Match[] = [
     statsUrl: 'https://www.vlr.gg/706323/sad-esports-vs-evictix-challengers-2026-north-america-ace-stage-3-r6-3-2-vs-2-3'
   },
   {
-    id: 'm7',
+    id: 'm17',
     stage: 'VCL 2026: North America ACE Stage 3',
     opponent: 'NBG',
     scoreSaD: 1,
@@ -97,7 +227,7 @@ export const MATCHES: Match[] = [
     statsUrl: 'https://www.vlr.gg/701231/nightblood-gaming-vs-sad-esports-challengers-2026-north-america-ace-stage-3-r5-3-1'
   },
   {
-    id: 'm8',
+    id: 'm18',
     stage: 'VCL 2026: North America ACE Stage 3',
     opponent: 'M80',
     scoreSaD: 1,
@@ -110,7 +240,7 @@ export const MATCHES: Match[] = [
     statsUrl: 'https://www.vlr.gg/688234/m80-vs-sad-esports-challengers-2026-north-america-ace-stage-3-r4-3-0'
   },
   {
-    id: 'm9',
+    id: 'm19',
     stage: 'VCL 2026: North America ACE Stage 3',
     opponent: 'NRG Academy',
     scoreSaD: 2,
@@ -123,7 +253,7 @@ export const MATCHES: Match[] = [
     statsUrl: 'https://www.vlr.gg/681523/sad-esports-vs-yfp-challengers-2026-north-america-ace-stage-3-r1'
   },
   {
-    id: 'm10',
+    id: 'm20',
     stage: 'VCL 2026: North America ACE Stage 3',
     opponent: 'FlyQuest',
     scoreSaD: 2,
@@ -136,7 +266,7 @@ export const MATCHES: Match[] = [
     statsUrl: 'https://www.vlr.gg/685253/sad-esports-vs-flyquest-challengers-2026-north-america-ace-stage-3-r2-0-1'
   },
   {
-    id: 'm11',
+    id: 'm21',
     stage: 'VCL 2026: North America ACE Stage 3',
     opponent: 'YFP',
     scoreSaD: 2,
@@ -251,7 +381,7 @@ export const PLAYERS: Player[] = [
     bio: 'Pure lightning on the space creation. Drives the team forward out of the Duelist slot on Neon, catching opponents off guard with explosive entry speed.',
     twitter: '@vitathedeleta',
     twitterUrl: 'https://x.com/vitathedeleta',
-    gameProfile: 'SmokeScreen#SAD',
+    gameProfile: 'SAD vita',
     gameProfileUrl: 'https://www.vlr.gg/player/45696/vita',
     avatarUrl: Avatars.vitaPl,
     avatarStyle: { skinColor: '#fdf2f8', hairColor: '#0369a1', hairStyle: 'bob', shirtColor: '#fda4af', accessories: 'none' }
@@ -259,67 +389,67 @@ export const PLAYERS: Player[] = [
   // === GC ROSTER PLACEHOLDERS (Keeping default fallback styles for future roster) ===
   {
     id: 'gc1',
-    nickname: 'TBD Player 1',
-    realName: 'Placeholder',
+    nickname: 'Rotten1',
+    realName: 'PK',
     role: 'INITIATOR',
     team: 'GC',
-    bio: 'Roster details coming soon.',
-    twitter: '@sadesports',
-    twitterUrl: 'https://twitter.com/sadesports',
-    gameProfile: 'TBD',
-    gameProfileUrl: '#',
+    bio: '~',
+    twitter: '@rotten1',
+    twitterUrl: 'https://twitter.com/rotten1',
+    gameProfile: 'SAD Rotten1',
+    gameProfileUrl: 'https://www.vlr.gg/player/53481/rotten1',
     avatarStyle: { skinColor: '#ffe4e6', hairColor: '#111827', hairStyle: 'bob', shirtColor: '#0284c7', accessories: 'none' }
   },
   {
     id: 'gc2',
-    nickname: 'TBD Player 2',
-    realName: 'Placeholder',
-    role: 'DUELIST',
+    nickname: 'wlloh',
+    realName: 'willow',
+    role: 'FLEX',
     team: 'GC',
-    bio: 'Roster details coming soon.',
-    twitter: '@sadesports',
-    twitterUrl: 'https://twitter.com/sadesports',
-    gameProfile: 'TBD',
-    gameProfileUrl: '#',
+    bio: '~',
+    twitter: '@1wlloh',
+    twitterUrl: 'https://twitter.com/1wlloh',
+    gameProfile: 'SAD wlloh',
+    gameProfileUrl: 'https://www.vlr.gg/player/40031/wlloh',
     avatarStyle: { skinColor: '#f1f5f9', hairColor: '#1e3a8a', hairStyle: 'spiky', shirtColor: '#bef264', accessories: 'none' }
   },
   {
     id: 'gc3',
-    nickname: 'TBD Player 3',
-    realName: 'Placeholder',
+    nickname: 'irene',
+    realName: 'irene',
     role: 'CONTROLLER',
     team: 'GC',
-    bio: 'Roster details coming soon.',
-    twitter: '@sadesports',
-    twitterUrl: 'https://twitter.com/sadesports',
-    gameProfile: 'TBD',
-    gameProfileUrl: '#',
+    bio: '~',
+    twitter: '@ir9neee',
+    twitterUrl: 'https://twitter.com/ir9neee',
+    gameProfile: 'SAD irene',
+    gameProfileUrl: 'https://www.vlr.gg/player/17928/jellyfish',
     avatarStyle: { skinColor: '#ffedd5', hairColor: '#4f46e5', hairStyle: 'classic', shirtColor: '#db2777', accessories: 'none' }
   },
   {
     id: 'gc4',
-    nickname: 'TBD Player 4',
-    realName: 'Placeholder',
+    nickname: 'harper',
+    realName: 'harper',
     role: 'SENTINEL',
     team: 'GC',
-    bio: 'Roster details coming soon.',
-    twitter: '@sadesports',
-    twitterUrl: 'https://twitter.com/sadesports',
-    gameProfile: 'TBD',
-    gameProfileUrl: '#',
+    bio: '~',
+    twitter: '@harpervall',
+    twitterUrl: 'https://twitter.com/harpervall',
+    gameProfile: 'SAD harper',
+    gameProfileUrl: 'https://www.vlr.gg/player/40928/harper',
     avatarStyle: { skinColor: '#fdf2f8', hairColor: '#0369a1', hairStyle: 'bob', shirtColor: '#fda4af', accessories: 'none' }
   },
   {
     id: 'gc5',
-    nickname: 'TBD Player 5',
-    realName: 'Placeholder',
-    role: 'FLEX',
+    nickname: 'f4ngz',
+    realName: 'ari',
+    role: 'DUELIST',
     team: 'GC',
-    bio: 'Roster details coming soon.',
-    twitter: '@sadesports',
-    twitterUrl: 'https://twitter.com/sadesports',
-    gameProfile: 'TBD',
-    gameProfileUrl: '#',
+    bio: '~',
+    twitter: '@f4ngzVLR',
+    twitterUrl: 'https://twitter.com/f4ngzVLR',
+    gameProfile: 'SAD f4ngz',
+    gameProfileUrl: 'https://www.vlr.gg/player/52249/f4ngz',
     avatarStyle: { skinColor: '#fae8ff', hairColor: '#6b21a8', hairStyle: 'topknot', shirtColor: '#2dd4bf', accessories: 'none' }
   }
 ];
